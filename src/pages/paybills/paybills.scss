@@ -1,0 +1,111 @@
+page-paybills {
+    @media only screen and (max-width: 375px) {
+        .scroll-content{
+            padding:0%;
+            background-color:#2E2F41;
+            border-top: 0 !important; 
+        }
+        .scroll-content::-webkit-scrollbar {
+            border:none;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .itmgrd{
+            padding:0%;
+            width:100vw;
+        }
+        .itmrw{
+            width:100vw;
+            padding:0%;
+            margin-top:3%;
+            text-align:center;
+        }
+        .itmpnl{
+            min-width:30vw;
+            max-width:30vw;
+            background-color:#35364b;
+            margin:0%;
+            margin-left:1.6vw;
+            margin-right:1.6vw;
+            margin-bottom:1.6vw;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding-top:3vw;
+            padding-bottom:3vw;        
+        }
+        .imgbtndv{
+            width:auto;
+            height:auto;
+        }
+        .imgdv{
+            width:23vw;
+            height:23vw;
+            background-color:transparent;
+            padding:0%;
+            margin-bottom:6%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .shpnmlbl{
+            color:#FFFFFF;
+            font-size:3.8vw;
+        }
+    }
+   
+    @media only screen and (min-width: 376px) {
+        .scroll-content{
+            padding:0%;
+            background-color:#2E2F41;
+            border-top: 0 !important; 
+        }
+        .scroll-content::-webkit-scrollbar {
+            border:none;
+            width:0;                               
+            background: rgba(0,0,0,0);
+        }
+        .itmgrd{
+            padding:0%;
+            width:100vw;
+        }
+        .itmrw{
+            width:100vw;
+            padding:0%;
+            margin-top:3%;
+            text-align:center;
+        }
+        .itmpnl{
+            min-width:30vw;
+            max-width:30vw;
+            background-color:#35364b;
+            margin:0%;
+            margin-left:1.6vw;
+            margin-right:1.6vw;
+            margin-bottom:1.6vw;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding-top:3vw;
+            padding-bottom:3vw;
+        }
+        .imgbtndv{
+            width:auto;
+            height:auto;
+        }
+        .imgdv{
+            width:23vw;
+            height:23vw;
+            background-color:transparent;
+            padding:0%;
+            margin-bottom:6%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .shpnmlbl{
+            color:#FFFFFF;
+            font-size:3.8vw;
+        }
+    }
+}

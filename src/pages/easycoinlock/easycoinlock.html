@@ -1,0 +1,70 @@
+<!--
+  Generated template for the EasycoinlockPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+<div class="pnwhlbdy">
+
+  <div class="topdv" *ngIf="is_mpin">
+    <img src="assets/imgs/imgusr.png" class="usrimgtp"/>
+   <label class="usrmblnmbr">{{phone}}</label>
+  </div>
+
+  <!-- Start Instructions for verification -->
+  <div class="vrfystpsdv" style="background-image:url('assets/imgs/bgblack.png') !important;" *ngIf="!is_set_mpin && !is_mpin">
+      <button ion-button class="rsndcdbtn" *ngIf="resend" (click)="resend_code()" [disabled]="btn">Resend Code</button>
+      <label class="tmrlbltp" *ngIf="!resend">{{displayTime}}</label>
+      <label text-center class="tmrsbttle">A mail has been sent to your e-mail address, please check it before it expires.</label>
+  </div>
+  
+   <!-- End Instructions for verification -->
+
+   <!-- Start Instructions for creating MPin -->
+   <div  *ngIf="!mpinShowLabel">
+   </div>
+  <div class="mpncrt" style="background-image:url('assets/imgs/bgblack.png') !important;" *ngIf="mpinShowLabel">
+    <label text-center class="tmrsbttle">Please set your Mobile Pin-code</label>
+  </div>
+   <!-- End Instructions for creating MPin -->
+  <div class="inptdsbld">
+    <ion-input type="password" disabled="true" maxlength="1" class="pininpt" text-center maxlength="1" #passcode1 (keyup)="onKeyUp($event,1)" [(ngModel)]="pcode1"></ion-input>
+    <div class="hypentxts">-</div>
+    <ion-input type="password" disabled="true" maxlength="1" class="pininpt" text-center maxlength="1" #passcode2 (keyup)="onKeyUp($event,2)" [(ngModel)]="pcode2"></ion-input>
+    <div class="hypentxts">-</div>
+    <ion-input type="password" disabled="true" maxlength="1" class="pininpt" text-center maxlength="1" #passcode3 (keyup)="onKeyUp($event,3)" [(ngModel)]="pcode3"></ion-input>
+    <div class="hypentxts">-</div>
+    <ion-input type="password" disabled="true" maxlength="1" class="pininpt" text-center maxlength="1" #passcode4 (keyup)="onKeyUp($event,4)" [(ngModel)]="pcode4"></ion-input>
+    <div class="hypentxts">-</div>
+    <ion-input type="password" disabled="true" maxlength="1" class="pininpt" text-center maxlength="1" #passcode5 (keyup)="onKeyUp($event,5)" [(ngModel)]="pcode5"></ion-input>
+    <div class="hypentxts">-</div>
+    <ion-input type="password" disabled="true" maxlength="1" class="pininpt" text-center maxlength="1" #passcode6 (keyup)="onKeyUp($event,6)" [(ngModel)]="pcode6"></ion-input>
+  </div>
+  <div class="inptkys">
+    <div class="btnrow">
+      <button ion-button class="pinkeys" style="border:0" (click)="pincode($event,1)">1</button>
+      <button ion-button class="pinkeys" (click)="pincode($event,2)">2</button>
+      <button ion-button class="pinkeys" (click)="pincode($event,3)">3</button>
+    </div>
+    <div class="btnrow">
+      <button ion-button class="pinkeys" (click)="pincode($event,4)">4</button>
+      <button ion-button class="pinkeys" (click)="pincode($event,5)">5</button>
+      <button ion-button class="pinkeys" (click)="pincode($event,6)">6</button>
+    </div>
+    <div class="btnrow">
+      <button ion-button class="pinkeys" (click)="pincode($event,7)">7</button>
+      <button ion-button class="pinkeys" (click)="pincode($event,8)">8</button>
+      <button ion-button class="pinkeys" (click)="pincode($event,9)">9</button>
+    </div>
+    <div class="btnrow">
+      <div class="pinkeys erser"></div>
+      <button ion-button class="pinkeys" (click)="pincode($event,0)">0</button>
+      <button ion-button class="pinkeys erser" no-lines (click)="eraser($event)"><ion-icon name="md-backspace" class="icnbckspc"></ion-icon></button>
+      </div>
+  </div>
+  <button ion-button class="lgoutbtn" *ngIf="is_mpin" (click)="logout()">Logout</button>
+  
+</div>
+</ion-content>

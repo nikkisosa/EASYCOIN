@@ -1,0 +1,49 @@
+
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title style="font-style:'roboto';">Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="scroll-content">
+  <div class="qrhldr">
+    
+  <!-- Start DIV for the QR Code -->
+  <div class="idntfctnimgpnl">
+  <div class="qrcodecs">
+  <ion-card class="qrcrd">
+    <ion-card-content class="qrcrd">
+      <img *ngIf="displayQrCode()" src="{{generated}}" />
+    </ion-card-content>
+  </ion-card>
+</div>
+</div>
+<!-- End DIV for the QR Code -->
+
+<div class="accntdtls" *ngFor="let data of info">
+    <div class="dtlcrdspnl">
+        <label class="ttltxt">Full Name</label>
+        <label class="dtlinfo">{{data.name}}</label>
+      </div>
+
+  <div class="dtlcrdspnl">
+    <label class="ttltxt">Mobile Number</label>
+    <label class="dtlinfo">{{data.number}}</label>
+  </div>
+
+  <div class="dtlcrdspnl">
+    <label class="ttltxt">E-mail Address</label>
+    <label class="dtlinfo">{{data.email}}</label>
+  </div>
+
+  <div class="dtlcrdspnl">
+    <label class="ttltxt">Address</label>
+    <label class="addrsinf">{{data.address}}</label>
+  </div>
+
+</div>
+</div>
+</ion-content>

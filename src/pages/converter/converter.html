@@ -1,0 +1,69 @@
+
+<ion-content class="scroll-content">
+  <div class="cnvrtnbdy" (click)="(close())">
+  </div>
+  <div class="cnrtionpnlhldr">
+     <div class="cnvrtpnlbdy">
+      <div>
+          <ion-item class="cnvrtpnlhdr" no-lines>
+              <ion-label class="cnvrtionoption" color="secondary">Convert from</ion-label>
+              <ion-select [(ngModel)]="convertion" class="cnvrtionoption">
+                <ion-option selected="true" value="v_btc">PHP to Bitcoin (BTC)</ion-option>
+              <!--   <ion-option value="v_eth">PHP to Etherium (ETH)</ion-option>
+                <ion-option value="v_ltc">PHP to Litecoin (LTC)</ion-option>
+                <ion-option value="v_zec">PHP to Zcash (ZEC)</ion-option>
+                <ion-option value="v_lcc">PHP to Litecoin Cash (LCC)</ion-option>
+                <ion-option value="v_usdt">PHP to Tether (USDT)</ion-option>
+                <ion-option value="v_bcc">PHP to Bitcoin Cash (BCH)</ion-option>
+                <ion-option value="v_btg">PHP to Bitcoin Gold (BTG)</ion-option> -->
+              </ion-select>
+            </ion-item>
+      </div>
+      <div class="pnlsubhdr" text-center><!-- *ngIf="convertion == 'PHP_TO_BTC'" -->
+        <label class="currntblnccnvrt">Current Peso Balance: <b class="crntblncamnt">PHP {{balance}}</b></label>
+      </div>
+
+      <div class="pnlcntnt">
+        <div class="bdyhdrwht">Please enter the amount to be converted below.</div>
+          <!-- Start PHP to BITCOIN value -->
+          <div class="bdyinpthldr" ><!-- *ngIf="convertion == 'PHP_TO_BTC'" -->
+            <ion-item class="inptbr" color="bodycolor" no-lines> 
+              <ion-label class="lblinpt">PHP</ion-label>
+              <ion-input #input type="number" inputmode="numeric"[disabled]="disabled" pattern="[0-9]*" placeholder="0" [(ngModel)]="php" (input)="convert()"></ion-input>
+            </ion-item>
+            <ion-icon name="swap" class="cntricn"></ion-icon>
+            <ion-item class="inptbr" color="bodycolor" no-lines> 
+              <ion-label class="lblinpt">BTC</ion-label>
+              <ion-input type="number" disabled="true" placeholder="0" [(ngModel)]="exchanged " ></ion-input>
+            </ion-item>
+          </div>
+
+       <div class="btmbtnhldr">
+         <button ion-button color="header" class="cnvrtbtnbtm" (click)="tapToConvert()" *ngIf="!onTap">TAP TO CONVERT</button>
+        <div color="header" class="btmspnrbtn" *ngIf="onTap"><ion-spinner name="dots" color="spinner" class="spnrbtn"></ion-spinner></div>
+       </div>
+      </div>
+     </div>
+
+
+     <!-- Start Loading -->
+     <div class="ldingdvcrncy" *ngIf="loading">
+        <ion-spinner name="dots" color="spinner" class="ldrdotsbtm"></ion-spinner>
+     </div>
+     <!-- End Loading -->
+
+
+  <!-- Start Currency Rates -->
+  <div  class="btcrtngs" *ngIf="!loading">
+      <div class="bypnl">
+          <div class="lblctgry">Buy</div>
+          <div class="exrt">1 BTC = &#8369;{{btcPHP}}</div>
+      </div> 
+      <div class="slpnl">
+          <div class="lblctgry">Sell</div>
+          <div class="exrt">1 BTC = &#8369;{{sell_price}}</div>
+      </div>
+    </div>
+    <!-- End Currency Rates -->
+  </div>
+</ion-content>

@@ -1,0 +1,45 @@
+<!--
+  Generated template for the LoadmodalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title style="font-style:'roboto';">
+     <div class="hdrdtls">
+        
+     </div>     
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="scroll-content">
+<div class="mjrdiv">
+
+  <!-- Div For the Icon and label -->
+<div class="tptier">
+  <div class="imgdvicn">
+      <img src="assets/imgs/strld.png" class="emlicn"/>
+  </div>
+  <div class="ttldescdv">
+      <label class="mnhdng">{{title}}</label>
+      <label class="dschdng">{{description}}</label>
+      <label class="ldlbl">Php {{amount}}</label> 
+  </div>
+</div>
+  <!-- End Div For the Icon and label -->
+
+  <!-- Div For the Searchbox and Button -->
+<div class="btmtier">
+  <div class="inptpnl">
+      <input type="tel" maxlength="11" pattern="[0-9]{10}" class="nminpt" placeholder="Enter Mobile Number" (keyup.enter)="proceed_or_not()" [(ngModel)]="customer_no"/>
+      <button ion-button class="srchbtn" color="primary" (click)="openContact()"><ion-icon name="search"></ion-icon></button>
+  </div>
+  <button ion-button class="ldbtn" color="header" (click)="proceed_or_not()"><label class="sndlbl">Tap to Proceed</label></button>
+</div>
+  <!-- End Div For the Searchbox and Button -->
+
+</div>
+
+</ion-content>

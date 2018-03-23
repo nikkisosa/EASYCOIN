@@ -1,0 +1,62 @@
+<!--
+  Generated template for the UsereditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    
+      <ion-navbar color="primary">
+        <div class="hdrpnltp">
+        <ion-title>Edit Account</ion-title>
+          <button ion-button class="btnedt" (click)="onSave()">
+            <label>Save</label> &nbsp;
+            <ion-icon name="checkmark"></ion-icon>
+            </button>
+          </div>
+      </ion-navbar>
+     
+    </ion-header>
+    
+    
+    <ion-content class="scroll-content">
+    <ion-list>
+  
+        <div class="cntrlcntnt" style="background-image: url('assets/imgs/orngbgavtrsmltwo.png'); background-size:100%;">
+        <div class="avtrimg">
+          <div class="usrimgavtr">
+            <img src="assets/imgs/imgusr.png" class="picavtr"/>
+          </div>
+          <!-- <a href="#" class="imgchangr">Change picture &nbsp;<ion-icon name="create" style="font-size:5vw !important;"></ion-icon></a> -->
+        </div>
+        <div  class="avtrdlts">
+        <ion-input type="text"  class="nminpt" text-center placeholder="Niki Raymundo M. Sosa" [(ngModel)]="name"></ion-input>
+        </div>  
+        </div>
+    
+    <div class="halfdiv">
+         <!--<div class="cntrlbtn">
+        <h2 class="hddtls">Phone Number</h2>
+        <ion-input type="number" class="prdtls" maxlength="11" placeholder="09366978125" [(ngModel)]="phone"></ion-input>
+      </div> -->
+    
+      <div class="cntrlbtn">
+        <h2 class="hddtls">Address</h2>
+        <ion-input type="text" class="prdtls" placeholder="pztech address" [(ngModel)]="address"></ion-input>
+      </div>
+      <div class="cntrlbtn">
+        <h2 class="hddtls">Email</h2>
+        <ion-input type="email" class="prdtls" placeholder="pztech@gmail.com" [(ngModel)]="email"></ion-input>
+      </div>
+
+      <div class="cntrlbtn">
+        <h2 class="hddtls">date of birth</h2>
+        <ion-item class="itmdtpckr">
+         <!--  <ion-label class="strttmlbl" ><ion-icon name="md-arrow-dropdown" class="icnpckr"></ion-icon></ion-label> -->
+          <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="date" class="dtpckritm" [(ngModel)]="dob">
+          </ion-datetime>
+        </ion-item>
+      </div>
+    </div>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,114 @@
+page-splashscreen {
+    @media only screen and (max-width: 375px) {
+    .scroll-content{
+        padding:0%;
+        margin:0%;
+        background-color:#2E2F41;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+    }
+
+    .splshbdy{
+        width:100vw;
+        height:100vh;
+        padding:0%;
+        display:flex;
+        flex-direction:column; 
+    }
+    .uprdv{
+        width:100vw;
+        height:45vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:0%;
+    }
+    .logoimg{
+        width:25vw; 
+        height:25vw;
+    }
+    .logotxt{
+        font-size:5vw;
+        font-weight:normal;
+        margin-top:3%;
+        letter-spacing:2px;
+        color:#FFFFFF;
+    }
+    .lwrdv{
+        width:100vw;
+        height:55vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-end;
+        padding:0%;
+        padding-bottom:5%;
+    }
+    .vrsntxt{
+        color:#FFFFFF;
+        font-style:'roboto';
+        font-size:3.5vw;
+    }
+
+}
+
+@media only screen and (min-width: 376px) {
+    .scroll-content{
+        padding:0%;
+        margin:0%;
+        background-color:#2E2F41;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+    }
+
+    .splshbdy{
+        width:100vw;
+        height:100vh;
+        padding:0%;
+        display:flex;
+        flex-direction:column; 
+    }
+    .uprdv{
+        width:100vw;
+        height:35vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:0%;
+    }
+    .logoimg{
+            width:20vw;
+             height:20vw;
+    }
+    .logotxt{
+        font-size:3.5vw;
+        font-style:'roboto';
+        font-weight:normal;
+        margin-top:3%;
+        letter-spacing:2.5px;
+        color:#FFFFFF;
+    }
+    .lwrdv{
+        width:100vw;
+        height:65vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-end;
+        padding:0%;
+        padding-bottom:5%;
+    }
+    .vrsntxt{
+        color:#FFFFFF;
+        font-style:'roboto';
+        font-size:3.8vw;
+        }
+    }
+
+}

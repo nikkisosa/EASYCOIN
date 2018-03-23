@@ -1,0 +1,8 @@
+{
+  "name": "EASYCOIN",
+  "app_id": "af3ed3a8",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

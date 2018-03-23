@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title style="font-style:'roboto';">History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="scroll-content">
+  <div class="hstrypnls">
+    <!-- <div class="spnrdvcntr" *ngIf="loading">
+        <ion-spinner name="crescent" color="spinner" class="spnrcrcl"></ion-spinner>
+        <label class="ldingplswt">Loading... Please wait.</label>
+    </div> -->
+    <loadingcomponent *ngIf="loading"></loadingcomponent>
+    <div *ngFor="let item of items">
+      <div class="hstrypnlsdvvr"  *ngIf="!loading">
+        <div class="tpdvpnl">
+          <div class="ttldv">{{item.action}}</div> 
+          <div class="dtdtl">{{item.time}}</div>
+        </div>
+    
+        <div class="btmdvpnl">
+            <div class="descbtm">{{item.description}}</div>
+            <div class="dtdtl">{{item.date}}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())" *ngIf="!loading">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+ 
+</ion-content>

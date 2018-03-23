@@ -1,0 +1,44 @@
+<!--
+  Generated template for the VerificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="scroll-content">
+<div class="vrfygrnddv">
+
+<!-- Start Verification Header Image -->
+<div class="uprdv">
+  <img src="assets/imgs/contactverify.png" class="imgvrfytp"/>
+</div>
+<!-- End Verification Header Image -->
+
+<!-- Start Verification Title and Input -->
+<div class="vrfyinpdv">
+  <label text-center class="ntrlblmd">Enter the verification code that you have received via SMS</label>
+  <ion-item class="cdhndlr">
+  <ion-input type="tel" value="" maxlength="6" class="cdnptbr" text-center [(ngModel)]="sms_code"></ion-input>
+  </ion-item>
+</div>
+<!-- End Verification Title and Input -->
+
+
+<div class="midbtmvd">
+<div class="rqstbtn" (click)="resend()" *ngIf="showResend"><label class="rqstcd"><a href="#">Resend Verification Code</a></label></div>
+
+<div class="btmhlf" *ngIf="counter"><label class="cdxprs">Verification Code Expires after</label>
+<label class="cntdwn">5 Minutes</label></div>
+</div>
+
+<!-- Start Submit Button and Sign-in link-->
+<div class="sbmtbtndv">
+  <button ion-button color="header" class="sbmtbtncd" (click)="verifying()" *ngIf="!loading">SUBMIT</button>
+  <button ion-button color="header" class="sbmtbtncd" *ngIf="loading"><ion-spinner name="dots" color="spinner" class="spnrbtn"></ion-spinner></button>
+  <label class="sgndfrntac"><a href="#">Sign-in using a different account</a></label>
+</div>
+<!-- End Submit Button and Sign-in link-->
+
+
+
+</div>
+</ion-content>

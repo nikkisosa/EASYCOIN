@@ -1,0 +1,392 @@
+page-paymentamount {
+html, body{
+    height:100% !important;
+}    
+@media only screen and (max-width: 375px){
+    .scroll-content{
+        padding:0%;
+        background-color:#2E2F41;
+        height:auto;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+        background: rgba(0,0,0,0);
+    }
+    .upprcntnr{
+        width:100vw;
+        height:auto;
+        padding:0%;
+        padding-top:10vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .instrctntp{
+        width:90vw;
+        color:#FFFFFF;
+        padding:0%;
+        font-size:5vw;
+        font-style:'roboto';
+        text-align:center;
+    }
+    .amnttxtcntnr{
+        width:85vw;
+        background-color:#2E2F41;
+        color:#FFFFFF;
+        text-align:center;
+        padding:0%;
+        margin-top:10%;
+        border:0%;
+        border:2px solid #5d7aee !important;
+        border-radius:25px;
+        font-size:3.8vw;
+    }
+    .lblamnt{
+        padding:0%;
+        padding-left:5vw;
+        font-size:5vw;
+    }
+    .amnttxt{
+        padding:0% !important;
+        font-size:4.5vw;
+        border:0px !important;
+    }
+    .amnttxt :focus{
+        border:0px !important;
+    }
+    .amnttxt :active{
+        border:0px !important;
+    }
+    .pymntdtlsonehldr{
+        padding-top:5vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .dtlstblone{
+        width:80%;
+        padding:0%;
+        margin-top:3vw;
+    }
+    .rcptdtlsbtm{
+        color:#FFFFFF;
+        font-size:4.5vw;
+        font-style:'roboto';
+        padding-top:2vw !important;
+        padding-bottom:2vw !important;
+        font-weight:normal;
+    }
+    .ttltxt{
+        font-weight:bold;
+        padding-top:2vw !important;
+        padding-bottom:2vw !important;
+    }
+    .prcdbtn{
+        width:90vw;
+        height:auto;
+        margin:0%;
+        font-size:4.5vw;
+        font-style:'roboto';
+        color:#FFFFFF;
+        padding-top:7vw;
+        padding-bottom:7vw;
+        bottom:0;
+        position:absolute;
+        margin-bottom:5vw;
+        margin-left:5vw;
+    }
+    .frstpymntdv{
+        width:100vw;
+        height:auto;
+        padding:0%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding-top:5vw;
+    }
+    .inptflds{
+        background-color:#2E2F41;
+        color:#ffffff;
+        padding:0%;
+        margin:0%;
+        font-size:3.8vw;
+        font-style:'roboto';
+        margin-bottom:2vw;
+        padding-left:5vw;
+        padding-right:5vw;
+    }
+    .slcthdrsrvces{
+        color:#FFFFFF;
+        font-size:4.5vw;
+        font-style:'roboto';
+        margin:0%;
+        padding-left:2vw;
+    }
+    .paidicnimg{
+        width:45vw;
+        height:45vw;
+        margin-bottom:5vw;
+    }
+    .tbldv{
+        background-color:#35364b;
+        width:95vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center; 
+        padding-top:3vw;
+        padding-bottom:3vw; 
+  }
+  .rfnmbrhdr{
+    color:#FFFFFF;
+    font-style:'roboto';
+    font-size:4vw;
+    margin-bottom:1%;
+    margin-top:0%;
+}
+.rfnmbrs{
+    color:#5d7aee;
+    font-style:'roboto';
+    font-size:5.8vw;
+    font-weight:bold;
+}
+.cmpnylg{
+    width:100vw;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-top:6vw;
+}
+.cmpnylgimg{
+    width:30vw;
+    height:30vw;
+    border:3px solid #5d7aee;
+    border-radius:50%;
+    padding:0%;
+}
+.bgprvw{
+    padding-top:2vw;
+    padding-bottom:2vw;
+}
+.grdne{
+    background-color:#35364b;
+    width:95%;
+    margin-left:2.5%;
+    margin-top:5vw;
+    padding:0%;
+    padding:2vw;
+}
+.rwprvw{
+    width:100% !important;
+}
+.cldtls{
+    padding:0%;
+    padding-left:2vw;
+    padding-right:2vw;
+    padding-top:2.5vw;
+    padding-bottom:2.5vw;
+    font-style:'roboto';
+    font-size:4vw;
+    color:#FFFFFF;
+}
+.txtlftclr{
+    color:#c2bebe;
+}
+}
+   @media only screen and (min-width: 376px){
+    .scroll-content{
+        padding:0%;
+        background-color:#2E2F41;
+        height:auto;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+        background: rgba(0,0,0,0);
+    }
+    .upprcntnr{
+        width:100vw;
+        height:35vh;
+        padding:0%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .instrctntp{
+        width:90vw;
+        color:#FFFFFF;
+        font-size:4.5vw;
+        font-style:'roboto';
+        text-align:center;
+    }
+    .amnttxtcntnr{
+        width:85vw;
+        background-color:#2E2F41;
+        color:#FFFFFF;
+        text-align:center;
+        padding:0%;
+        margin-top:10%;
+        border:0%;
+        border:2px solid #5d7aee !important;
+        border-radius:25px;
+    }
+    .lblamnt{
+        padding:0%;
+        padding-left:5vw;
+        font-size:5vw;
+    }
+    .amnttxt{
+        font-size:4vw;
+        border:0px !important;
+    }
+    .amnttxt :focus{
+        border:0px !important;
+    }
+    .amnttxt :active{
+        border:0px !important;
+    }
+    .pymntdtlsonehldr{
+        padding-top:5vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .dtlstblone{
+        width:80%;
+        padding:0%;
+        margin-top:3vw;
+    }
+    .rcptdtlsbtm{
+        color:#FFFFFF;
+        font-size:4.5vw;
+        font-style:'roboto';
+        padding-top:2%;
+        padding-bottom:3%;
+        font-weight:normal;
+    }
+    .ttltxt{
+        font-weight:bold;
+    }
+    .prcdbtn{
+        width:90vw;
+        height:auto;
+        margin:0%;
+        font-size:4.5vw;
+        font-style:'roboto';
+        color:#FFFFFF;
+        padding-top:7vw;
+        padding-bottom:7vw;
+        bottom:0;
+        position:absolute;
+        margin-bottom:5vw;
+        margin-left:5vw;
+    }
+    .inptflds{
+        background-color:#2E2F41;
+        color:#FFFFFF;
+        padding:0%;
+        margin:0%;
+        font-size:3.8vw;
+        font-style:'roboto';
+        margin-bottom:2vw;
+        padding-left:5vw;
+        padding-right:5vw;
+    }
+    .paidicnimg{
+        width:43vw;
+        height:43vw;
+        margin-bottom:5vw;
+    }
+    .rfnmbrhdr{
+        color:#FFFFFF;
+        font-style:'roboto';
+        font-size:4vw;
+        margin-bottom:3%;
+    }
+    .rfnmbrs{
+        color:#5d7aee;
+        font-style:'roboto';
+        font-size:5.5vw;
+        font-weight:bold;
+    }
+    .tbldv{
+        background-color:#35364b;
+        width:95vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center; 
+        padding-top:3vw;
+        padding-bottom:3vw; 
+  }
+  .slcthdrsrvces{
+    color:#FFFFFF;
+    font-size:4.5vw;
+    font-style:'roboto';
+    margin:0%;
+    padding-left:2vw;
+}
+.cmpnylg{
+    width:100vw;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-top:6vw;
+}
+.cmpnylgimg{
+    width:30vw;
+    height:30vw;
+    border:3px solid #5d7aee;
+    border-radius:50%;
+    padding:0%;
+}
+.frstpymntdv{
+    width:100vw;
+    height:auto;
+    padding:0%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-top:5vw;
+}
+.bgprvw{
+    padding-top:2vw;
+    padding-bottom:2vw;
+}
+.grdne{
+    background-color:#35364b;
+    width:95%;
+    margin-left:2.5%;
+    margin-top:5vw;
+    padding:0%;
+    padding:2vw;
+}
+.rwprvw{
+    width:100% !important;
+}
+.cldtls{
+    padding:0%;
+    padding-left:2vw;
+    padding-right:2vw;
+    padding-top:2.5vw;
+    padding-bottom:2.5vw;
+    font-style:'roboto';
+    font-size:4vw;
+    color:#FFFFFF;
+}
+.txtlftclr{
+    color:#c2bebe;
+}
+} 
+}

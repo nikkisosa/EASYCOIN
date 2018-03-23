@@ -1,0 +1,371 @@
+<ion-header>
+  <ion-navbar color="header" style="padding:0%;">
+    <ion-grid>
+      <ion-row>
+
+        <ion-grid class="grndnvflxr">
+          <ion-row class="grndrwdv">
+
+            <ion-col col-2 class="nvbtncl">
+              <button ion-button menuToggle class="nvtglr" col-12 (click)="openMenu()">
+                <ion-icon name="md-menu"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col col-8 class="hdngtopupwllt">
+            <div class=""> 
+              <label class="wllthdngup">
+              WALLET
+            </label>
+            </div>
+           </ion-col>
+            </ion-row>
+
+
+            <ion-row>
+              <div class="hdrphpwlltup">
+                  <label class="crncylbl">Php</label>
+                  <label class="psocrcyamntup">{{balance}}</label>
+              </div>
+           <!--  <ion-col col-7 class="flxrcl" *ngIf="showDiv">
+              <div class="flxr">
+                <div class="row wallethd">
+                  <label class="sbttle">Balance</label>
+                </div>
+                <div class="row wallethd">
+                  <label class="sbttle">PHP</label>
+                  &nbsp;
+                  <label class="sbttleamnt">{{balance}}</label>
+                </div>
+              </div>
+            </ion-col>
+
+            <ion-col col-7 class="flxrcltwo" *ngIf="!showDiv" >
+                <div class="flxr">
+                  <div class="row wallethd">
+                    <label class="sbttle">Balance</label>
+                  </div>
+                  <div class="row wallethd">
+                    <label class="sbttle">BTC</label>
+                    &nbsp;
+                    <label class="sbttleamnt">{{w_btc}}</label>
+                  </div>
+                </div>
+              </ion-col> -->
+
+           <!--  <ion-col col-2 class="swapbtncl">
+              <button ion-button col-12 color="header" (click)="showHideDiv()">
+                <ion-icon name="md-swap"></ion-icon>
+              </button>
+            </ion-col> -->
+
+          </ion-row>
+
+        </ion-grid>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+</ion-header>
+
+<!-- Side Navigation -->
+<menu [name]='name'></menu>
+<!-- End Side Navigation -->
+
+
+
+
+
+<ion-content class="scroll-content">
+  <ion-refresher (ionRefresh)="doRefresh($event)" class="rfrshr" color="header">
+    <ion-refresher-content color="header" class="rfrshrcntnt"></ion-refresher-content>
+  </ion-refresher>
+<div class="grnddvcntr">
+<!-- Start Main Content -->
+  <div class="cntnrnwdiv">
+<!-- start QR Code -->
+    <!--  <div class="qrhldrhmdv">
+        <ion-card class="qrcrd">
+            <ion-card-content class="qrcrd">
+              <img *ngIf="displayQrCode()" src="{{generated}}" class="qrimg"/>
+            </ion-card-content>
+          </ion-card>
+     </div> -->
+<!-- End QR Code -->
+
+<!-- Crypto Panels New -->
+<div class="crptopnlsscndup">
+  <!-- Start Crypto Panel -->
+  <div class="snglcrptopnlmid">
+    <div class="crptolgolft">
+      <img src="assets/imgs/btclogo.png" class="crptoimglgo"/>
+    </div>
+    <div class="dtlscntrdvpnl">
+      <label class="crptonmlblup">
+        BTC
+      </label>
+      <label class="crptoamnlblundr">
+        {{w_btc}}
+      </label>
+    </div>
+    <div class="psorightamntmid">
+      <label class="phplbllft">Php</label>
+      <label class="lblinpesorhgt">{{btc_in_php}}</label>
+    </div>
+  </div>
+   <!-- End Crypto Panel -->
+    <!-- Start Dummy Crypto Panels -->
+   <div class="snglcrptopnlmid">
+      <div class="crptolgolft">
+        <img src="assets/imgs/usdtlogo.png" class="crptoimglgo"/>
+      </div>
+      <div class="dtlscntrdvpnl">
+        <label class="crptonmlblup">
+          USDT
+        </label>
+        <label class="crptoamnlblundr">
+         0.2000000000
+        </label>
+      </div>
+      <div class="psorightamntmid">
+        <label class="phplbllft">Php</label>
+        <label class="lblinpesorhgt">100.00</label>
+      </div>
+    </div>
+
+    <div class="snglcrptopnlmid">
+        <div class="crptolgolft">
+          <img src="assets/imgs/ltclogo.png" class="crptoimglgo"/>
+        </div>
+        <div class="dtlscntrdvpnl">
+          <label class="crptonmlblup">
+            LTC
+          </label>
+          <label class="crptoamnlblundr">
+           2.00000000000000000
+          </label>
+        </div>
+        <div class="psorightamntmid">
+          <label class="phplbllft">Php</label>
+          <label class="lblinpesorhgt">2,000.00</label>
+        </div>
+      </div>
+ <!-- end Dummy Crypto Panels -->
+</div>
+<!-- End Crypto Panels New -->
+
+<!-- Start Currencies   NEW LAYOUT -->
+<!-- <div class="crncyctanr">
+<div class="phpwlltdv">
+  <div class="phphdrtp"><label class="sbttle">Php</label></div>
+  <div class="phphdrtpsbcntnr"><label class="sbttleamnt">{{balance}}</label></div>
+</div>
+<div class="crptobtmpnl">
+  <div class="crptocrcypnl">
+    <label class="crncynmtp">Bitcoin (BTC)</label>
+    <label class="crncyamntsb">{{w_btc}}</label>
+  </div>
+  <div class="spcrmdl"></div>
+  <div class="crptocrcypnl">
+      <label class="crncynmtp">Etherium (ETH)</label>
+      <label class="crncyamntsb">0.00</label>
+  </div>
+</div>
+<div class="crptobtmpnl">
+    <div class="crptocrcypnl">
+        <label class="crncynmtp">Litecoin (LTC)</label>
+        <label class="crncyamntsb">0.00</label>
+    </div>
+    <div class="spcrmdl"></div>
+    <div class="crptocrcypnl">
+        <label class="crncynmtp">Zcash (ZEC)</label>
+        <label class="crncyamntsb">0.00</label>
+    </div>
+  </div>
+  <div class="crptobtmpnl">
+      <div class="crptocrcypnl"> 
+        <label class="crncynmtp">Litecoin Cash (LCC)</label>
+        <label class="crncyamntsb">0.00</label>
+      </div>
+      <div class="spcrmdl"></div>
+      <div class="crptocrcypnl">
+        <label class="crncynmtp">US Dollar (Tether)</label>
+        <label class="crncyamntsb">0.00</label>
+      </div>
+    </div>
+    <div class="crptobtmpnl">
+        <div class="crptocrcypnl"> 
+          <label class="crncynmtp">Bitcoin Cash (BCH)</label>
+          <label class="crncyamntsb">0.00</label>
+        </div>
+        <div class="spcrmdl"></div>
+        <div class="crptocrcypnl">
+          <label class="crncynmtp">Bitcoin Gold (BTG)</label>
+          <label class="crncyamntsb">0.00</label>
+        </div>
+      </div>
+</div> -->
+<!-- End Currencies -->
+
+<!-- start Shortcut Buttons -->
+     <div class="navibtns">
+      <button ion-button color="header" class="nvbtnshrt" (click)="page('money')">
+        <table class="shrtcttbl">
+          <tr>
+            <td><ion-icon name="ios-cash-outline" class="shrcticns"></ion-icon></td>
+          </tr>
+          <tr>
+            <td><label class="shrtctnvlbls">Add Money</label></td>
+          </tr>
+        </table>
+      </button>
+
+      <button ion-button color="header" class="nvbtnshrt" (click)="convert()">
+        <table class="shrtcttbl">
+          <tr>
+            <td><ion-icon name="ios-swap" class="shrcticns"></ion-icon></td>
+          </tr>
+          <tr>
+            <td><label class="shrtctnvlbls">Convert</label></td>
+          </tr>
+        </table>
+      </button>
+
+      <button ion-button color="header" class="nvbtnshrt" (click)="page('network')">
+        <table class="shrtcttbl">
+          <tr>
+            <td><ion-icon name="ios-basket" class="shrcticns"></ion-icon></td>
+          </tr>
+          <tr>
+            <td><label class="shrtctnvlbls">Buy Load</label></td>
+          </tr>
+        </table>
+      </button>
+
+      <button ion-button color="header" class="nvbtnshrt" (click)="page('qr')">
+        <table class="shrtcttbl">
+          <tr>
+            <td><ion-icon name="ios-share-alt" class="shrcticns"></ion-icon></td>
+          </tr>
+          <tr>
+            <td><label class="shrtctnvlbls">transfer</label></td>
+          </tr>
+        </table>
+      </button>
+          
+     </div>
+<!-- end Shortcut Buttons -->
+  </div>
+
+<!-- Start bottom Container for Verification notifs -->
+<!-- <div class="btmprtdv" *ngIf="identifier_bottom_banner == 'false'"> -->
+<!-- Start Slider bottom -->
+  <!-- <ion-slides class="pgrbtvrfy"> -->
+<!-- Start One Verification Panel -->
+    <!-- <ion-slide class="vrfysldr" *ngIf="email_bottom_banner == 'false'">
+        <div class="vrfypnl">
+          <div class="pnlhdr">
+            <label class="ttlhdng">E-mail Verification</label>
+            <label class="sbttlhdng">Verify your e-mail to unlock more features</label>
+          </div>
+          <div class="pnlcntnt">
+            <img src="assets/imgs/emailicn.png" />
+          </div>
+          <div class="pnlftr">
+            <button ion-button class="vrfybtnbtm" (click)="page('email')" color="linkcolor">Tap to Verify</button>
+          </div>
+        </div>
+    </ion-slide> -->
+<!-- End One Verification Panel -->
+
+<!-- Start One Verification Panel -->
+     <!--  <ion-slide class="vrfysldr" *ngIf="identifier_bottom_banner == 'false'">
+        <div class="vrfypnl">
+          <div class="pnlhdr">
+            <label class="ttlhdng">Identity Verification</label>
+            <label class="sbttlhdng">Verify your identity to unlock more features</label>
+          </div>
+          <div class="pnlcntnt">
+            <img src="assets/imgs/identificationicn.png" />
+          </div>
+          <div class="pnlftr">
+            <button ion-button class="vrfybtnbtm" color="linkcolor">Tap to Verify</button>
+          </div>
+        </div>
+      </ion-slide> -->
+<!-- End One Verification Panel -->
+   <!--  </ion-slides> -->
+    
+    
+
+<div class="pnlscntnradsandvrfy">
+<!--Start New Verification panels and adds -->
+<ion-slides class="nwsldsndadds" pager effect="coverflow">
+  <!-- Start Single Slide -->
+    <ion-slide class="sldrsandadspnls" *ngIf="identifier_bottom_banner == 'false'">
+      <div class="adsandvrfypnls">
+        <div class="imglftofpnl"><img src="assets/imgs/emaillogo.png" class="imglftcntnt" /></div>
+        <div class="rghtpnlinfos">   
+            <label class="ttlhdngofpnl">E-mail Verification</label>
+            <label class="sbttlhdngofpnl">Verify your e-mail to unlock more features.</label>
+          </div>
+      </div>
+      </ion-slide>
+   <!-- End Single slide -->
+   <!-- Start Single Slide -->
+   <ion-slide class="sldrsandadspnls" *ngIf="identifier_bottom_banner == 'false'">
+      <div class="adsandvrfypnls">
+        <div class="imglftofpnl"><img src="assets/imgs/idlogo.png" class="imglftcntnt" /></div>
+        <div class="rghtpnlinfos">   
+            <label class="ttlhdngofpnl">Identity Verification</label>
+            <label class="sbttlhdngofpnl">Verify your identity to unlock more features.</label>
+          </div>
+      </div>
+      </ion-slide>
+   <!-- End Single slide -->
+
+</ion-slides>
+<!--Start New Verification panels and adds -->
+</div>
+
+
+
+
+
+<!-- End Bottom Slider -->
+<!--   </div> -->
+<!-- End bottom Container for Verification notifs -->
+
+
+<!-- Start History Div -->
+<div class="hstrydvcntr">
+ <!-- Start History Div`s Loading -->
+ <div class="ldingsgndv" *ngIf="loading">
+    <ion-spinner name="crescent" color="spinner" class="spnrcrcl"></ion-spinner>
+ </div>
+ <!-- End History Div`s Loading -->
+<!-- Start History Panel -->
+<div class="hstrypnls" *ngIf="!loading">
+    <div *ngFor="let item of items">
+      <div class="hstrypnlsdvvr">
+        <div class="tpdvpnl">
+          <div class="ttldv">{{item.action}}</div> 
+          <div class="dtdtl">{{item.time}}</div>
+        </div>
+
+        <div class="btmdvpnl">
+          <div class="descbtm">{{item.description}}</div>
+          <div class="dtdtl">{{item.date}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hstrypnlsdvvrsmr" (click)="page('history')" *ngIf="items.length == 10">
+      <label class="smrtxt">Tap here to See more</label>
+    </div>
+</div>
+<!-- End History Panel -->
+</div>
+<!-- End History Div -->
+<!-- End Main Content -->
+</div>
+</ion-content>

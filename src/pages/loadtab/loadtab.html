@@ -1,0 +1,283 @@
+
+<!-- <ion-header>
+  <ion-navbar color="header">
+      <ion-title style="font-style:'roboto';">Loads</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="tabs-content scroll-content" tabbarPlacement="bottom">
+  <ion-tabs color="header">
+    <ion-tab [root]="tab1Root" tabTitle="Regular" class="tbttl"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="CallText" class="tbttl"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Data" class="tbttl"></ion-tab>
+  </ion-tabs> -->
+<!-- <div class="trynav">
+  <div class="nvbtn" (click)="onTab('regular')">Regular</div>
+  <div class="nvbtn" (click)="onTab('call')">CallText</div>
+  <div class="nvbtn" (click)="onTab('data')">Data</div>
+</div> -->
+<!-- </ion-content> -->
+
+
+<ion-header>
+    <ion-navbar color="header">
+        <ion-title style="font-style:'roboto';">Loads</ion-title>
+    </ion-navbar>
+    <ion-toolbar style="padding:0%;" color="header">
+        <div>
+            <ion-segment [(ngModel)]="net_desc">
+              <ion-segment-button value="regular" class="tbsbtn" (ionSelect)="ionSelect('regular')" ngSelected="selected">
+                Regular
+              </ion-segment-button>
+              <ion-segment-button value="calltext"  class="tbsbtn" (ionSelect)="ionSelect('calltext')">
+                Call/Text
+              </ion-segment-button>
+              <ion-segment-button value="data"  class="tbsbtn" (ionSelect)="ionSelect('data')">
+                Data
+              </ion-segment-button>
+            </ion-segment>
+          </div>
+    </ion-toolbar>
+    
+      
+</ion-header>
+  
+  <ion-content class="tabs-content scroll-content" tabbarPlacement="bottom">
+
+  <div [ngSwitch]="net_desc">
+    <div *ngIf="network == 'smart'">
+      <ion-list class="smrtlstrg" *ngSwitchCase="'regular'" >
+          <div *ngFor="let item of products ">
+            <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+              <div class="imgdv">
+                <img src="assets/imgs/smart.png" />
+              </div>
+              <div class="dtldv">
+                <div>
+                  <label class="mnlbl">{{item.title}}</label>
+                </div>
+                <div>
+                  <label class="przlbl">{{item.currency}}</label>
+                  <label class="mnylbl">&nbsp;{{item.amount}}</label>
+                </div>
+                <div>
+                  <label class="przlbl">{{item.validity}}</label>
+                </div>
+              </div>
+              <div class="btndv">
+                <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+              </div>
+            </div>
+          </div>
+      </ion-list>
+
+      <ion-list class="smrtlstrg" *ngSwitchCase="'calltext'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/smart.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+
+      <ion-list class="smrtlstrg" *ngSwitchCase="'data'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/smart.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+    </div>
+
+    <div *ngIf="network == 'globe'">
+      <ion-list class="smrtlstrg" *ngSwitchCase="'regular'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/globe.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+
+      <ion-list class="smrtlstrg" *ngSwitchCase="'calltext'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/globe.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+      
+      <ion-list class="smrtlstrg" *ngSwitchCase="'data'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/globe.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+
+      </div>
+
+    <div *ngIf="network == 'sun'">
+      <ion-list class="smrtlstrg" *ngSwitchCase="'regular'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/sunlg.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+
+      <ion-list class="smrtlstrg" *ngSwitchCase="'calltext'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/sunlg.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+      
+      <ion-list class="smrtlstrg" *ngSwitchCase="'data'">
+        <div *ngFor="let item of products ">
+          <div class="ldtb" (click)="open(item.amount,item.network,item.code,item.title,item.validity)">
+            <div class="imgdv">
+              <img src="assets/imgs/sunlg.png" />
+            </div>
+            <div class="dtldv">
+              <div>
+                <label class="mnlbl">{{item.title}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.currency}}</label>
+                <label class="mnylbl">&nbsp;{{item.amount}}</label>
+              </div>
+              <div>
+                <label class="przlbl">{{item.validity}}</label>
+              </div>
+            </div>
+            <div class="btndv">
+              <ion-icon name="ios-arrow-dropright-outline" class="btnicn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+
+    </div>
+  </div>
+</ion-content>
+
+

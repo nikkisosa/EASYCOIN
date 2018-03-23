@@ -1,0 +1,56 @@
+page-contact {
+.scroll-content::-webkit-scrollbar {
+        overflow-y:hidden !important;
+        border:none;
+        width:0;
+        background: rgba(240, 166, 166, 0);
+}
+.scroll-content{
+    background-color:#2E2F41;
+}
+.hdrdvsrch{
+    background-color: #1E1E28;
+}
+.itmpnl{
+    border-bottom:.05px solid #e3e3e3;
+    height:15vw;
+    padding:0%;
+    padding-left:3%;
+}
+.numbrlbl{
+    color: #585858;
+    float: right;
+    text-align:right;
+}
+.srchbr{
+    z-index:3;
+    width:100%;
+}
+.cntnmbr{
+    color: rgb(179, 178, 228);
+    font-size:3.8vw;
+}
+.cntctpnl{
+    border-bottom:.20px solid rgb(38, 39, 54) !important;
+    margin:0%;
+    padding:0%;
+    padding:2vw;
+}
+.dtaspacng{
+    padding-top:1vw;
+    padding-bottom:1vw;
+}
+.nmcntctprsn{
+    color:#FFFFFF;
+}
+.cntctnm{
+    font-size:4vw;
+    color:#FFFFFF;
+}
+.lstcntct{
+    //position:absolute;
+    z-index:1;
+    padding:0%;
+    padding:1%;
+}
+}

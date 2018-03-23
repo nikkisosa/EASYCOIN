@@ -1,0 +1,30 @@
+<ion-menu type="overlay" [content]="content" style="padding:0%; height:100vh !important; overflow:hidden !important;">
+  <ion-header color="header" style=" height:30vh !important;">
+    <ion-navbar color="header" class="sdmnu">
+      <ion-toolbar>
+        <div class="acntinf">
+          <img src="assets/imgs/imgusr.png" class="imgnvprfl" />
+          <label class="nvusrnm">{{name}}</label>
+        </div>
+      </ion-toolbar>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content style="height:100vh !important; overflow:hidden !important;">
+    <ion-list no-lines class="nvbtnlstsd" style="min-height:90% !important;max-height:90% !important; margin:0%;">
+
+      <button *ngFor="let menus of menu" ion-item class="itmpnlnv" color="{{menus.bgcolor}}" (click)="page(menus.page)">
+        <ion-icon [name]="menus.icon_name" [ngClass]="menus.icon_class"></ion-icon> &nbsp;
+        <label [ngClass]="menus.label_class">{{menus.title}}</label>
+      </button>
+      
+    </ion-list>
+
+    <button no-lines ion-item class="itmpnlnv btmbtnlgout" text-center color="header" style="height:10% !important;margin:0% !important;"
+      (click)="page('logout')">
+      <label class="lgoutlbl">Logout</label>
+    </button>
+  </ion-content>
+          
+</ion-menu>
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

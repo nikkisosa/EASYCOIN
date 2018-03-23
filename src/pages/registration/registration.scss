@@ -1,0 +1,357 @@
+page-registration {
+    @media only screen and (max-width: 375px) {
+    .scroll-content{
+        padding:0%;
+        margin:0%;
+        background-color:#2E2F41;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+    }
+.grnddiv{
+    width:100vw;
+    height:100vh;
+    padding:0%;
+    padding-top:10vw;
+    margin:0%;
+    display:flex;
+    flex-direction:column;
+    background-color:#2E2F41;
+}
+.reglst{
+    background-color:#2E2F41;
+    padding:0%;
+}
+.itmdivmn{
+    width:100vw;
+    padding-left:10vw;
+    height:auto;
+    margin-top:0%;
+    margin-bottom:0%;
+    margin-bottom:1.5vw;
+}
+.btmspcrfrbtn{
+    margin-bottom:5vw;
+}
+.btnitmdv{
+    width:100vw;
+    padding-left:10vw;
+    height:auto;
+    margin-top:0vw;
+}
+.answrdvinpt{
+    width:100%;
+    height:auto;
+    margin:0%;
+    padding:0%;
+    margin-top:2vw;
+}
+.qstnhdrdv{
+    width:90vw;
+    padding-left:4vw;
+    padding-right:4vw;
+    padding-top:5vw;
+    padding-bottom:5vw;
+    margin-left:5vw;
+    height:auto;
+    margin-top:5vw;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:0% !important;
+    background-color:#35364b;
+}
+.itmdiv{
+    background-color:#2E2F41;
+    padding:0%;
+    width:80vw;
+}
+.answrscrt{
+    background-color:transparent;
+    padding:0%;
+    width:97%;
+    margin:0%;
+}
+.signupbtn{
+    background: linear-gradient(to bottom,  rgb(42, 43, 59), rgb(33, 34, 48) );
+    font-weight:normal;
+    width:80vw;
+    height:auto;
+    padding-top:5vw;
+    padding-bottom:5vw;
+    margin:0%;
+    margin-top:4%;
+    color:#FFFFFF;
+    font-style:'roboto';
+    font-size:4.5vw;
+}
+.signupbtn:hover{
+    background-color: linear-gradient(to bottom,  rgb(43, 44, 61), #1E1E28 );
+}
+.signupinpt{
+    color:#FFFFFF;
+    background-color:#2E2F41;
+    font-size:4vw;
+    padding:0%;
+    margin:0% !important;
+}
+.answrinptsgn{
+    color:#FFFFFF;
+    background-color:#35364b;
+    font-size:4vw;
+    padding:0%;
+}
+.rgbtmlbl{
+    width:100%;
+    margin:0%;
+    padding:0%;
+    padding-top:5%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:rgb(167, 170, 236);
+    font-size:4vw;
+}
+.tphrlbl a{
+    text-decoration:none;
+    color:#ffffff; 
+    font-weight:bolder;
+}
+.lblregis{
+    font-style:'roboto';
+    font-size:3.9vw;
+    color:#cecece !important;
+    margin:0% !important;
+    margin-bottom:0% !important;
+    }
+    .optionscret{
+        text-align:center !important;
+        width:50vw !important;
+    }
+    .scndsbdv{
+        width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        margin-bottom:5vw;
+    }
+    .hdngdv{
+        width:100%;
+        height:auto;
+        padding-top:4vw;
+        padding-bottom:4vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .emlicn{
+        height:38vw;
+        width:38vw;
+    }
+    .hdnglbl{
+        color:#FFFFFF;
+        font-style:'roboto';
+        font-size:5vw;
+        font-weight:bold;
+    }
+    .hdnsbttl{
+        width:80vw;
+        text-align:center;
+        color: rgb(179, 178, 228);
+        padding-top:1%;
+        font-size:4vw;
+    }
+    .sqbdy{
+        padding-top:0vw;
+        padding-bottom:0vw;
+    }
+    .qstnlblfrm{
+        color:rgb(207, 207, 207);
+        font-size:3.8vw;
+        font-style:'roboto';
+        margin-bottom:1vw;
+    }
+    .qstnsbttlfrm{
+        color:#FFFFFF;
+        font-size:4.5vw;
+        font-style:'roboto';
+        
+    }
+    .slctqstionsecurity{
+        color:#FFFFFF !important;
+        font-size:3.8vw;
+    }
+}
+@media only screen and (min-width: 376px) {
+    .scroll-content{
+        padding:0%;
+        margin:0%;
+        background-color:#2E2F41;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+    }
+.grnddiv{
+    width:100vw;
+    height:100vh;
+    padding:0%;
+    padding-top:10vw;
+    margin:0%;
+    display:flex;
+    flex-direction:column;
+    background-color:#2E2F41;
+}
+.reglst{
+    background-color:#2E2F41;
+    padding:0%;
+}
+.itmdivmn{
+    width:100vw;
+    padding-left:10vw;
+    height:auto;
+    margin-top:3vw;
+}
+.itmdiv{
+    background-color:#2E2F41;
+    padding:0%;
+    width:80vw;
+}
+.signupbtn{
+    background: linear-gradient(to bottom,  #2a2b3b, #212230 );
+    font-weight:normal;
+    width:80vw;
+    height:auto;
+    padding-top:5vw;
+    padding-bottom:5vw;
+    margin:0%;
+    margin-top:8%;
+    color:#FFFFFF;
+    font-style:'roboto';
+    font-size:4vw;
+}
+.signupbtn:hover{
+    background-color:linear-gradient(to bottom,  #2a2b3b, #212230 );
+}
+.signupinpt{
+    color:#FFFFFF;
+    background-color:#2E2F41;
+    font-size:4.2vw;
+}
+.rgbtmlbl{
+    width:100%;
+    margin:0%;
+    padding:0%;
+    padding-top:5%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:rgb(167, 170, 236);
+    font-size:4vw;
+}
+.tphrlbl a{
+    text-decoration:none;
+    color:#FFFFFF; 
+    font-weight:bolder;
+}
+.lblregis{
+    font-style:'roboto';
+    font-size:3.9vw;
+    color:#cecece !important;
+    margin:0% !important;
+    margin-bottom:2% !important;
+    }
+    .qstnlblfrm{
+        color:rgb(207, 207, 207);
+        font-size:3.8vw;
+        font-style:'roboto';
+        margin-bottom:1vw;
+    }
+    .qstnsbttlfrm{
+        color:#FFFFFF;
+        font-size:4vw;
+        font-style:'roboto';   
+    }
+    .answrinptsgn{
+        color:#FFFFFF;
+        background-color:#35364b;
+        font-size:4vw;
+        padding:0%;
+    }
+    .hdngdv{
+        width:100%;
+        height:auto;
+        padding-top:5vw;
+        padding-bottom:5vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .emlicn{
+        height:35vw;
+        width:35vw;
+    }
+    .hdnglbl{
+        color:#FFFFFF;
+        font-style:'roboto';
+        font-size:4vw;
+        font-weight:bold;
+    }
+    .hdnsbttl{
+        width:80vw;
+        text-align:center;
+        color: rgb(179, 178, 228);
+        padding-top:1%;
+        font-size:3.8vw;
+    }
+    .sqbdy{
+        padding-top:0vw;
+        padding-bottom:0vw;
+    }
+    .slctqstionsecurity{
+        color:#FFFFFF !important;
+        font-size:3.8vw;
+    }
+    .qstnhdrdv{
+        width:90vw;
+        padding-left:4vw;
+        padding-right:4vw;
+        padding-top:4vw;
+        padding-bottom:4vw;
+        margin-left:5vw;
+        height:auto;
+        margin-top:5vw;
+        display:flex;
+        flex-direction:column;
+        margin-bottom:0% !important;
+        background-color:#35364b;
+    }
+    .answrdvinpt{
+        width:100%;
+        height:auto;
+        margin:0%;
+        padding:0%;
+        margin-top:3vw;
+    }
+    .answrscrt{
+        background-color:transparent;
+        padding:0%;
+        width:97%;
+        margin:0%;
+    }
+    .btnitmdv{
+        width:100vw;
+        padding-left:10vw;
+        height:auto;
+        margin-top:0vw;
+    }
+    .optionscret{
+        text-align:center !important;
+        width:50vw !important;
+    }
+}
+}

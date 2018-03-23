@@ -1,0 +1,101 @@
+<!--
+  Generated template for the PincodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content class="scroll-content">
+<div class="pnwhlbdy">
+  <div class="pntpdv">
+      <label class="entrpnlbl">Enter Pin</label>
+      <div class="pncrcls">
+
+        <div *ngIf="limit == '1'" class="flxrrw">
+          <div class="crcls crclsnw"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+        </div>
+        <div *ngIf="limit == '0'"  class="flxrrw"> 
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+        </div>
+
+        <div *ngIf="limit == '2'"  class="flxrrw">
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+        </div>
+
+        <div *ngIf="limit == '3'"  class="flxrrw">
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+        </div>
+
+        <div *ngIf="limit == '4'"  class="flxrrw">
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls"></div>
+          <div class="crcls"></div>
+        </div>
+
+        <div *ngIf="limit == '5'"  class="flxrrw">
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls"></div>
+        </div>
+
+        <div *ngIf="limit == '6'"  class="flxrrw {{shake}}">
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+          <div class="crcls crclsnw"></div>
+        </div>
+      </div>
+  </div>
+  <div class="pnbtnsdv">
+    <div class="btnrw">
+      <button class="kybtn " (click)="pinCode('1')">1</button>
+      <button class="kybtn" (click)="pinCode('2')">2</button>
+      <button class="kybtn" (click)="pinCode('3')">3</button>
+    </div>
+    <div class="btnrw">
+      <button class="kybtn" (click)="pinCode('4')">4</button>
+      <button class="kybtn" (click)="pinCode('5')">5</button>
+      <button class="kybtn" (click)="pinCode('6')">6</button>
+    </div>
+    <div class="btnrw">
+      <button class="kybtn" (click)="pinCode('7')">7</button>
+      <button class="kybtn" (click)="pinCode('8')">8</button>
+      <button class="kybtn" (click)="pinCode('9')">9</button>
+    </div>
+    <div class="btnrw">
+      <button class="invbtn"></button>
+      <button class="kybtn" (click)="pinCode('0')">0</button>
+      <button class="invbtn" (click)="onDelete()">Delete</button>
+    </div>
+
+  </div>
+</div>
+</ion-content>

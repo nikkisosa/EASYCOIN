@@ -1,0 +1,356 @@
+page-login {
+    @media only screen and (max-width: 375px) {
+    .scroll-content{
+        padding:0%;
+        margin:0%;
+        display:flex;
+        flex-direction:column;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+    }
+    .inptlst{
+       display:flex;
+       flex-direction:column;
+       padding:0%;
+       padding:1%;
+       align-items:center;
+       justify-content:center;
+       animation-name:hideshowinput;
+       animation-fill-mode:forwards;
+       animation-duration:2s;
+    }
+    @keyframes hideshowinput{
+        from{transform:translateY(70%); opacity:0,}
+        to{transform:translateY(0); opacity:10}
+    }
+    .lginmn{
+        width:100vw;
+        padding:0%;
+        padding-left:10vw;
+    }
+    .usrnmipt{
+        padding:0%;
+        background-color:#FFFFFF;
+        width:80vw;
+        border:0%;
+        animation-name:inputbgchanger;
+        animation-duration:3s;
+        animation-fill-mode:forwards;
+    }
+    .pwrdipt{
+        padding:0%;
+        background-color:#FFFFFF;
+        width:80vw;
+        border:0%;
+        animation-name:inputbgchanger;
+        animation-duration:3s;
+        animation-fill-mode:forwards;
+    }
+    @keyframes inputbgchanger{
+        from{background-color:#FFFFFF;}
+        to{background-color:#2E2F41;}
+    }
+    @keyframes inputlabelcolor{
+        from{color:#2E2F41;}
+        to{color:#FFFFFF;}
+    }
+    .inptusername{
+        color:#f6f6f6;
+    }
+    .pwdundrln{
+        color:#f6f6f6;
+        font-weight:bold;
+    }
+    .lginbtn{
+        background: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+        width:80vw;
+        height:auto;
+        padding-top:5vw;
+        padding-bottom:5vw;
+        margin-top:5%;
+    }
+    .lginbtn:hover{
+        background-color: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+    }
+    .lginbtn:focus{
+        background-color: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+    }
+    .lginbtn:active{
+        background-color: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+    }
+    .btnlblsign{
+        font-size:5vw;
+        font-style:'roboto';
+        color:white;
+    }
+    .mjrdiv{
+        padding:0%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    }
+    .lgodv{
+        width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:0%;
+        padding-top:22vw;
+        padding-bottom:22vw;
+        animation-name:poptext;
+        animation-duration:5s;
+        animation-fill-mode:forwards;
+    }
+    .logotxt{
+        font-size:5vw;
+        font-weight:normal;
+        margin-top:3%;
+        letter-spacing:2px;
+    }
+    .logoimg{
+        width:25vw; 
+        height:25vw;
+    }
+
+    @keyframes poptext{
+        from{color:#2E2F41;}
+        to{ color:#FFFFFF; font-weight:bolder;}
+    }
+    @keyframes bgchange{
+        from{background-color:#FFFFFF;}
+        to{background-color:#2E2F41;}
+    }
+    @keyframes darkertextchange{
+        from{color:rgb(177, 181, 247);}
+        to{color:rgb(188, 191, 248);}
+    }
+    .iongrd{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+    }
+    .lblbtmfdiv{
+        font-size:4vw;
+        animation-name:darkertextchange;
+        animation-fill-mode:forwards;
+        animation-duration:2s;
+    }
+    .flexerDiv{
+        width:100vw;
+        height: 100vh;
+        padding:0%;
+        display:flex;
+        flex-direction:column;
+        margin:0%;
+    }
+    .loglbl{
+        font-style:'roboto';
+        font-weight:normal;
+        animation-name:inputlabelcolor;
+        animation-fill-mode:forwards;
+        animation-duration:2s;
+        font-size:4.5vw;
+    }
+    .regdiv{
+        padding:0%;
+        padding-top:3%;
+        display:flex;
+        flex-direction:row;
+        color:#9c9591;
+        font-size:4vw;
+    }
+    .signupbtn{
+        text-decoration:none;
+        color:#FFFFFF;
+        animation-name:poptext;
+        animation-fill-mode:forwards;
+        animation-duration:2s;
+    }
+}
+
+@media only screen and (min-width: 376px) {
+    .scroll-content{
+        padding:0%;
+        margin:0%;
+        display:flex;
+        flex-direction:column;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:none;
+        width:0;
+    }
+    .inptlst{
+       display:flex;
+       flex-direction:column;
+       padding:0%;
+       padding:1%;
+       align-items:center;
+       justify-content:center;
+       animation-name:hideshowinput;
+       animation-fill-mode:forwards;
+       animation-duration:2s;
+    }
+    @keyframes hideshowinput{
+        from{transform:translateY(70%); opacity:0,}
+        to{transform:translateY(0); opacity:10}
+    }
+    .lginmn{
+        width:100vw;
+        padding:0%;
+        padding-left:10vw;
+    }
+    .usrnmipt{
+        padding:0%;
+        background-color:#FFFFFF;
+        width:80vw;
+        border:0%;
+        animation-name:inputbgchanger;
+        animation-duration:3s;
+        animation-fill-mode:forwards;
+    }
+    .pwrdipt{
+        padding:0%;
+        background-color:#FFFFFF;
+        width:80vw;
+        border:0%;
+        animation-name:inputbgchanger;
+        animation-duration:3s;
+        animation-fill-mode:forwards;
+    }
+    @keyframes inputbgchanger{
+        from{background-color:#FFFFFF;}
+        to{background-color:#2E2F41;}
+    }
+    @keyframes inputlabelcolor{
+        from{color:#2E2F41;}
+        to{color:#FFFFFF;}
+    }
+    .inptusername{
+        color:#f6f6f6;
+        font-size:3.8vw;
+    }
+    .pwdundrln{
+        color:#f6f6f6;
+        font-weight:bold;
+        font-size:3.8vw;
+    }
+    .lginbtn{
+        background: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+        width:80vw;
+        height:auto;
+        padding-top:5vw;
+        padding-bottom:8vw;
+        margin-top:8%;
+    }
+    .lginbtn:hover{
+        background-color: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+    }
+    .lginbtn:focus{
+        background-color: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+    }
+    .lginbtn:active{
+        background-color: linear-gradient(to bottom,  rgb(46, 47, 66) , rgb(30, 31, 43) );
+    }
+    .btnlblsign{
+        font-size:3.8vw;
+        font-style:'roboto';
+        color:white;
+    }
+    .mjrdiv{
+        padding:0%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    }
+    .lgodv{
+        width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:0%;
+        padding-top:17.5vw;
+        padding-bottom:17.5vw;
+        animation-name:poptext;
+        animation-duration:2s;
+        animation-fill-mode:forwards;
+    }
+    .logotxt{
+        font-size:3.5vw;
+        font-style:'roboto';
+        font-weight:normal;
+        margin-top:3%;
+        letter-spacing:2.5px;
+    }
+    .logoimg{
+        width:20vw;
+         height:20vw;
+    }
+
+    @keyframes poptext{
+        from{color:#2E2F41;}
+        to{ color:#FFFFFF; font-weight:bolder;}
+    }
+    @keyframes bgchange{
+        from{background-color:#FFFFFF;}
+        to{background-color:#2E2F41;}
+    }
+    @keyframes darkertextchange{
+        from{color:rgb(177, 181, 247);}
+        to{color:rgb(188, 191, 248);}
+    }
+    .iongrd{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+    }
+    .lblbtmfdiv{
+        animation-name:darkertextchange;
+        animation-fill-mode:forwards;
+        animation-duration:2s;
+        font-style:'roboto';
+        font-size:3.8vw;
+    }
+    .flexerDiv{
+        width:100vw;
+        height: 100vh;
+        padding:0%;
+        display:flex;
+        flex-direction:column;
+        margin:0%;
+    }
+    .loglbl{
+        font-style:'roboto';
+        font-weight:bold;
+        animation-name:inputlabelcolor;
+        animation-fill-mode:forwards;
+        animation-duration:2s;
+        font-size:3.5vw;
+    }
+    .regdiv{
+        padding:0%;
+        padding-top:3%;
+        display:flex;
+        flex-direction:row;
+        color:#9c9591;
+        font-size:4vw;
+    }
+    .signupbtn{
+        text-decoration:none;
+        animation-name:poptext;
+        animation-fill-mode:forwards;
+        animation-duration:2s;
+        font-size:3.2vw;
+    }
+
+}
+}

@@ -1,0 +1,351 @@
+page-levels {
+    @media only screen and (max-width: 375px) {
+        .scroll-content{
+            padding:0%;
+            background-color:#2E2F41;
+        }
+        .scroll-content::-webkit-scrollbar {
+            border:none;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .grnddvwhl{
+            width:100vw;
+            padding:0%;
+        }
+        .lvlhdng{
+            width:100vw;
+            height:10vh;
+            padding:0%;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .lvlhdngttl{
+            font-size:4.5vw;
+            font-weight:bold;
+            font-style:'roboto';
+            color:#FFFFFF;
+            padding:0%;
+            margin:0%;
+            margin-right:3%;
+        }
+        .lmtspnlcntnr{
+            width:96vw;
+            height:40vh;
+            margin-left:2vw;
+            background-color:#35364b;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .lvlsbttl{
+            font-size:4.5vw;
+            font-style:'roboto';
+            font-weight:bold;
+            color:rgb(93, 122, 238);
+            padding:0%;
+            margin:0%;
+        }
+        .vrfditms{
+            width:100vw;
+            padding:0%;
+        }
+        .vrfhdngs{
+            width:100vw;
+            height:8vh;
+            padding:0%;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            color:#FFFFFF;
+            font-style:'roboto';
+            font-weight:normal;
+            font-size:4.5vw;
+        }
+        /* Start Uncleared Label Class*/
+        .ntfnshvrfd{
+           display:none;
+        }
+        /*End Uncleared Label Class*/
+
+        /* Start Cleared Label Class*/
+        .fnshvrfd{
+            padding:0%;
+            padding-left:1%;
+            padding-right:1%;
+            font-size:3.2vw;
+        }        
+        /* End Cleared Label Class*/
+        .ldingcntnt{
+            width:100vw;
+            height:90vh;
+            padding:0%;
+            margin:0%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .ldingplswt{
+            font-size:3.5vw;
+            font-style:'roboto';
+            color:#FFFFFF;
+            margin-top:2vw;
+        }
+        .spnrcrcl{
+            margin:0%;
+            padding:0%;
+            height:10%;
+            width:10%;
+        }
+        .lvlcntntlst{
+            width:96vw;
+            height:auto;
+            padding:0%;
+            margin-left:2vw;
+            background-color:#35364b;
+        }
+        .lftdtl{
+            font-weight:normal;
+            width:50vw;
+            padding:0%;
+            padding-left:15%;
+            color:#FFFFFF;
+            font-size:4vw;
+        }
+        .rghtdtl{
+            width:50vw;
+            padding:0%;
+            text-align:right;
+            padding-right:15%;
+        }
+        .mstrtbl{
+            width:100vw;
+            padding:0%;
+        }
+        .vrfydta{
+            padding:0%;
+            padding-top:3%;
+            padding-bottom:3%;
+        }
+
+        /* Start Class for Unverified items */
+        .vrfybtn{
+            width:25vw;
+            text-align:center;
+            padding:0%;
+            padding-top:5%;
+            padding-bottom:5%;
+            font-weight:normal;
+            font-size:3.8vw;
+            background-color:rgb(93, 122, 238);
+            color:#FFFFFF;
+        }
+        .vrfybtn:hover{
+            background-color:rgb(106, 134, 248);
+            color:rgb(238, 238, 238);
+        }
+        .vrfybtn:focus{
+            background-color:rgb(106, 134, 248);
+            color:rgb(238, 238, 238);
+        }
+        .vrfybtn:active{
+            background-color:rgb(106, 134, 248);
+            color:rgb(238, 238, 238);
+        }
+        /* End Class for Unverified items */
+
+        /* Start Class for Verified items */
+        .vrfiedbtn{
+            width:25vw;
+            text-align:center;
+            padding:0%;
+            padding-top:5%;
+            padding-bottom:5%;
+            font-weight:normal;
+            font-size:3.8vw;
+            background-color:transparent;
+            border:2px solid rgb(93, 122, 238);
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        .vrfiedbtn :hover{
+            background-color:#2E2F41;
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        .vrfiedbtn :active{
+            background-color:#2E2F41;
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        .vrfiedbtn :focus{
+            background-color:#2E2F41;
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        /* End Class for Verified items */
+    }
+    @media only screen and (min-width: 376px) {
+        .scroll-content{
+            padding:0%;
+            background-color:#2E2F41;
+        }
+        .scroll-content::-webkit-scrollbar {
+            border:none;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .grnddvwhl{
+            width:100vw;
+            padding:0%;
+        }
+        .lvlhdng{
+            width:100vw;
+            height:10vh;
+            padding:0%;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .lvlhdngttl{
+            font-size:4.5vw;
+            font-weight:bold;
+            font-style:'roboto';
+            color:#FFFFFF;
+            padding:0%;
+            margin:0%;
+            margin-right:3%;
+        }
+        .lvlsbttl{
+            font-size:4.5vw;
+            font-style:'roboto';
+            font-weight:bold;
+            color:rgb(93, 122, 238);
+            padding:0%;
+            margin:0%;
+        }
+        .lmtspnlcntnr{
+            width:96vw;
+            height:40vh;
+            margin-left:2vw;
+            background-color:#35364b;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .vrfditms{
+            width:100vw;
+            padding:0%;
+        }
+        .vrfhdngs{
+            width:100vw;
+            height:8vh;
+            padding:0%;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            color:#FFFFFF;
+            font-style:'roboto';
+            font-weight:normal;
+            font-size:4.5vw;
+        }
+        .ntfnshvrfd{
+            display:none;
+         }
+         .lvlcntntlst{
+            width:96vw;
+            height:auto;
+            padding:0%;
+            margin-left:2vw;
+            background-color:#35364b;
+        }
+        .mstrtbl{
+            width:100vw;
+            padding:0%;
+        }
+        .vrfydta{
+            padding:0%;
+            padding-top:3%;
+            padding-bottom:3%;
+        }
+        .lftdtl{
+            font-weight:normal;
+            width:50vw;
+            padding:0%;
+            padding-left:15%;
+            color:#FFFFFF;
+            font-size:4vw;
+        }
+        .rghtdtl{
+            width:50vw;
+            padding:0%;
+            text-align:right;
+            padding-right:15%;
+        }
+         /* Start Class for Verified items */
+         .vrfiedbtn{
+            width:25vw;
+            text-align:center;
+            padding:0%;
+            padding-top:5%;
+            padding-bottom:5%;
+            font-weight:normal;
+            font-size:3.8vw;
+            background-color:transparent;
+            border:2px solid rgb(93, 122, 238);
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        .vrfiedbtn :hover{
+            background-color:#2E2F41;
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        .vrfiedbtn :active{
+            background-color:#2E2F41;
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        .vrfiedbtn :focus{
+            background-color:#2E2F41;
+            color:rgb(93, 122, 238);
+            cursor:default;
+        }
+        /* End Class for Verified items */
+
+         /* Start Class for Unverified items */
+         .vrfybtn{
+            width:25vw;
+            text-align:center;
+            padding:0%;
+            padding-top:5%;
+            padding-bottom:5%;
+            font-weight:normal;
+            font-size:3.8vw;
+            background-color:rgb(93, 122, 238);
+            color:#FFFFFF;
+        }
+        .vrfybtn:hover{
+            background-color:rgb(106, 134, 248);
+            color:rgb(238, 238, 238);
+        }
+        .vrfybtn:focus{
+            background-color:rgb(106, 134, 248);
+            color:rgb(238, 238, 238);
+        }
+        .vrfybtn:active{
+            background-color:rgb(106, 134, 248);
+            color:rgb(238, 238, 238);
+        }
+        /* End Class for Unverified items */
+    }
+
+    }

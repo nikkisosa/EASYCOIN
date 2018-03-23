@@ -1,0 +1,37 @@
+<ion-content class="scroll-content" style="padding:0%;margin:0%; background-color:#FFFFFF; width:100vw;height:100vh;animation-name:bgchange; animation-duration:3s;animation-fill-mode:forwards;">
+  <ion-grid style="padding:0%; margin:0%;" class="iongrd">
+    <div class="flexerDiv">
+      <div class="mjrdiv">
+        <div class="lgodv">
+            <img class="logoimg" src="assets/imgs/eclogo.png"/>
+            <label class="logotxt">EASYCOIN</label>
+        </div>
+
+        <ion-list class="inptlst">
+          <div class="lginmn">
+            <ion-item class="usrnmipt" no-lines> 
+              <ion-label class="loglbl" floating>E-mail Address</ion-label>
+              <ion-input class="inptusername" [(ngModel)]="user"></ion-input>{{user}}
+            </ion-item>
+          </div>
+            
+          <div class="lginmn">
+            <ion-item class="pwrdipt" no-lines>
+              <ion-label class="loglbl" floating>Password</ion-label>
+              <ion-input class="pwdundrln" type="password" [(ngModel)]="pw" (keyup.enter)="signin()"></ion-input>
+            </ion-item>
+          </div>
+          <button class="lginbtn" ion-button (click)="signin()">
+            <label class="btnlblsign">Sign-in</label>
+          </button> 
+
+          <div class="regdiv">
+            <label class="lblbtmfdiv">Tap</label> &nbsp;
+            <a href="#" class="signupbtn" (click)="directToSignup()">Here</a> &nbsp;
+            <label class="lblbtmfdiv"><b>to Sign-up</b></label>
+          </div>
+        </ion-list>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>

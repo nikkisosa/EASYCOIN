@@ -1,0 +1,107 @@
+<ion-content style="padding:0%;" class="scroll-content">
+<div class="grnddiv">
+  <ion-list class="reglst">
+
+<!-- Start Div of Registration form for basic information -->    
+<div class="frstsbdv" *ngIf="!proceed">   
+  <div class="itmdivmn">
+    <ion-item class="itmdiv">
+      <ion-label class="lblregis" floating>First Name</ion-label>
+      <ion-input class="signupinpt" [(ngModel)]="_name"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="itmdivmn">
+    <ion-item class="itmdiv">
+      <ion-label class="lblregis" floating>Last Name</ion-label>
+      <ion-input class="signupinpt" [(ngModel)]="_lname"></ion-input>
+    </ion-item>
+  </div>
+  <div class="itmdivmn">
+    <ion-item class="itmdiv">
+      <ion-label class="lblregis" floating>Middle Name</ion-label>
+      <ion-input class="signupinpt" [(ngModel)]="_mname"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="itmdivmn">
+    <ion-item class="itmdiv">
+      <ion-label class="lblregis" floating>E-mail</ion-label>
+      <ion-input type="email" class="signupinpt" [(ngModel)]="_email"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="itmdivmn">
+    <ion-item class="itmdiv">
+      <ion-label class="lblregis" floating>Mobile Number</ion-label>
+      <ion-input type="tel" maxlength="11" class="signupinpt" [(ngModel)]="user"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="itmdivmn">
+    <ion-item class="itmdiv">
+      <ion-label class="lblregis" floating>Set Your Password</ion-label>
+      <ion-input type="password" class="signupinpt" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </div>
+  
+  <div class="itmdivmn btmspcrfrbtn">
+    <ion-item class="itmdiv">
+      <ion-label class="lblregis" floating>Verify Password</ion-label>
+      <ion-input type="password" class="signupinpt" [(ngModel)]="retype" ></ion-input>
+    </ion-item>
+  </div>
+</div> 
+<!-- End Div of Registration form for basic information -->   
+
+<!-- Start Div for the Security Question and answer -->
+<div class="scndsbdv" *ngIf="proceed">
+  <div class="hdngdv">
+    <img class="emlicn" src="assets/imgs/squestionicon.png"/>
+    <label class="hdnglbl">Security Question</label>
+    <label class="hdnsbttl">Please pick and answer one security question below.</label>
+  </div>
+  <div class="sqbdy">
+    <div class="itmdivmn">
+      <ion-item class="itmdiv">
+        <ion-label class="lblregis">Pick your security question</ion-label>
+        <ion-select  [(ngModel)]="question" (ionChange)="onChange()" class="slctqstionsecurity">
+          <ion-option class="optionscret" *ngFor="let security of squestion">{{security.q}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+  <div class="qstnhdrdv" *ngIf="checkvalue"> 
+      <label class="qstnlblfrm">Question:</label>
+      <label class="qstnsbttlfrm">{{question}}</label>
+
+    <div class="answrdvinpt">
+      <ion-item class="answrscrt" no-lines>
+        <ion-input class="answrinptsgn" placeholder="Enter your answer here" text-center [(ngModel)]="sanswer" ></ion-input>
+      </ion-item>
+    </div>
+  </div>
+  </div>
+</div>
+<!-- End Div for the Security Question and answer -->
+
+  <div class="btnitmdv" *ngIf="!proceed">
+    <button class="signupbtn" ion-button (click)="onProceed()">Next</button>
+  </div> 
+  <div class="btnitmdv" *ngIf="proceed">
+    <button class="signupbtn" ion-button *ngIf="!tap" (click)="signup() ">Proceed</button>
+    <button class="signupbtn" ion-button *ngIf="tap" ><ion-spinner name="dots" color="spinner" class="spnrbtn"></ion-spinner></button>
+  </div>
+
+  <!-- Link to Login-page -->
+  <div class="btmntsng">
+  <div class="rgbtmlbl"><label>Have an account already?</label><label class="tphrlbl"> &nbsp; Tap <a (click)="backToSignin()">Here</a> <b>to Sign-in.</b></label></div>
+  </div>
+   <!-- End Link to Login-page -->
+
+  </ion-list>
+  
+</div>
+</ion-content>
+
+

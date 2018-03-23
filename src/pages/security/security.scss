@@ -1,0 +1,51 @@
+page-security {
+    @media only screen and (max-width: 375px) {
+        .scroll-content::-webkit-scrollbar {
+            overflow-y:hidden !important;
+            border:none;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .scrtypnl{
+            height:20vw;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            padding-left:3%;
+            padding-right:3%;
+            margin-top:1%;
+            border-bottom:.05px solid #e3e3e3;
+        }
+        .pnltxt{
+            font-style:'roboto';
+            padding:0%;
+            font-size:5vw;
+            color: #585858;
+        }
+    }
+    @media only screen and (min-width: 376px) {
+        .scroll-content::-webkit-scrollbar {
+            overflow-y:hidden !important;
+            border:none;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .scrtypnl{
+            height:10vw;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            padding-left:3%;
+            padding-right:3%;
+            margin-top:1%;
+            border-bottom:.05px solid #e3e3e3;
+        }
+        .pnltxt{
+            font-style:'roboto';
+            padding:0%;
+            font-size:3vw;
+            color: #585858;
+        }
+       
+    }
+}

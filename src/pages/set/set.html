@@ -1,0 +1,17 @@
+<ion-content class="scroll-content">
+  <div class="whlpn">
+    <div class="bgblk">
+    </div>
+    <div class="pncntnr">
+      <!-- <label class="ntrpncd">Set your pincode</label> -->
+      <div class="itmpn">
+        <ion-input #input text-center class="inpttxt" placeholder="Enter 6-digit Pin Code" [(ngModel)]="limit" type="tel" maxLength="6"
+          minLength="6"  inputmode="numeric"></ion-input>
+      </div>
+      <div class="btnprt">
+        <button ion-button class="btnbtn" (click)="closeModal()">Cancel</button>
+        <button ion-button class="btnbtn" (click)="setPin()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

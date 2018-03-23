@@ -1,0 +1,152 @@
+page-address {
+    @media only screen and (max-width: 375px) {
+        .scroll-content{
+           /*  overflow-y: hidden; */
+            padding:0%;
+            background-color:#2E2F41;
+        }
+        .scroll-content::-webkit-scrollbar {
+            border:0;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .adrsgrnddv{
+            width:100vw;
+            height:100vw;
+        }
+        .hdrpnl{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+          /*   background-color:red; */
+            padding-top:5vw;
+            padding-bottom:5vw;
+        }
+        .hdnglbl{
+            color:#FFFFFF;
+            font-style:'roboto';
+            font-size:5vw;
+            font-weight:bold;
+        }
+        .hdnsbttl{
+            width:80vw;
+            text-align:center;
+            color: rgb(179, 178, 228);
+            padding-top:1%;
+            font-size:4vw;
+        }
+        .adrsicn{
+            height:45vw;
+            width:45vw;
+        }
+        .bttmdv{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-direction:column;
+            align-items:center;    
+            padding-top:10vw;
+            /* background-color:yellow; */
+        }
+        .emlitminpt{
+            width:90vw;
+            background-color:#2E2F41;
+            padding:0%;
+            margin-bottom:5%;
+        }
+        .emlinptbx{
+            color:#FFFFFF;
+            font-style:'roboto';
+            font-size:4.3vw;
+            font-weight:normal;
+        }
+        .sndbtn{
+            width:90vw;
+            margin:0%;
+            font-size:4.5vw;
+            font-style:'roboto';
+            color:#FFFFFF;
+            padding-top:7vw;
+            padding-bottom:7vw;
+            margin-top:13vw;
+        }
+    }
+    @media only screen and (min-width: 376px) {
+        .scroll-content{
+            /* overflow-y: hidden; */
+            padding:0%;
+            background-color:#2E2F41;
+        }
+        .scroll-content::-webkit-scrollbar {
+            border:0;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .adrsgrnddv{
+            width:100vw;
+            height:100vw;
+        }
+        .hdrpnl{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            padding-top:5vw;
+            padding-bottom:5vw;
+           /*  background-color:pink; */
+        }
+        .hdnglbl{
+            color:#FFFFFF;
+            font-style:'roboto';
+            font-size:5vw;
+            font-weight:bold;
+        }
+        .hdnsbttl{
+            width:80vw;
+            text-align:center;
+            color: rgb(179, 178, 228);
+            padding-top:1%;
+            font-size:4vw;
+        }
+        .adrsicn{
+            height:45vw;
+            width:45vw;
+        }
+        .bttmdv{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding-top:3vw;
+            /*background-color:orange;*/
+        }
+        .emlitminpt{
+            width:90vw;
+            background-color:#2E2F41;
+            padding:0%;
+            margin-bottom:5%;
+        }
+        .emlinptbx{
+            color:#FFFFFF;
+            font-style:'roboto';
+            font-size:4.3vw;
+            font-weight:normal;
+        }
+        .sndbtn{
+            width:90vw;
+            margin:0%;
+            font-size:4.5vw;
+            font-style:'roboto';
+            color:#FFFFFF;
+            padding-top:7%;
+            padding-bottom:7%;
+            margin-top:5%;
+        }
+    }
+}

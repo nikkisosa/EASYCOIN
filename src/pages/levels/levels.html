@@ -1,0 +1,122 @@
+<!--
+  Generated template for the LevelsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title style="font-style:'roboto';">Levels and Limits</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="scroll-content">
+<!-- Loading -->
+<loadingcomponent *ngIf="loading"></loadingcomponent>
+<!-- End Loading -->
+
+<!-- Content -->
+<div class="grnddvwhl" *ngIf="!loading">
+  <div class="lvlhdng">
+    <label class="lvlhdngttl">Current Level</label>
+    <label class="lvlsbttl">First</label>
+  </div>
+
+  <!-- Start Limits Panel -->
+  <div class="lmtspnlcntnr">
+    Limits
+  </div>
+  <!-- End Limits Panel -->
+
+  <div class="vrfditms">
+
+    <!-- Start Level 1 -->
+    <div class="vrfhdngs">
+        <label>First Level </label>
+
+        <!-- start Cleared Status for cleared levels -->
+        <label class="ntfnshvrfd">&nbsp; Cleared <ion-icon name="md-checkmark"></ion-icon></label>
+        <!-- end Cleared Status for cleared levels -->
+
+    </div>
+    <div class="lvlcntntlst">
+      <table class="mstrtbl">
+        <tr>
+          <td class="vrfydta"><div class="lftdtl">Contact Number</div></td>
+          <td class="vrfydta"><div class="rghtdtl"><button class="vrfiedbtn">Verified</button></div></td>
+        </tr>
+        <tr>
+            <td class="vrfydta"><div class="lftdtl">E-mail Address</div></td>
+            <td class="vrfydta" *ngIf="email == 'false'"><div class="rghtdtl"><button class="vrfybtn" (click)="page('email')">Verify</button></div></td>
+            <td class="vrfydta" *ngIf="email == 'true'"><div class="rghtdtl"><button class="vrfiedbtn">Verified</button></div></td>
+          </tr>
+      </table>
+    </div>
+    <!-- End Level 1 -->
+
+    <!-- Start Level 2 -->
+    <div class="vrfhdngs">
+        <label>Second Level</label>
+    </div>
+    <div class="lvlcntntlst">
+      <table class="mstrtbl">
+      <tr>
+          <td class="vrfydta"><div class="lftdtl">Home Address</div></td>
+          <td class="vrfydta" *ngIf="address == 'false'">
+            <div class="rghtdtl" *ngIf="email == 'false'"><button class="vrfybtn" disabled="true">Verify</button></div>
+            <div class="rghtdtl" *ngIf="email == 'true'"><button class="vrfybtn" (click)="page('address')">Verify</button></div>
+          </td>
+          <td class="vrfydta" *ngIf="address == 'true'"><div class="rghtdtl"><button class="vrfiedbtn" >Verified</button></div></td>
+      </tr>
+      <tr>
+            <td class="vrfydta"><div class="lftdtl">Government ID`s</div></td>
+            <td class="vrfydta" *ngIf="govid == 'false'">
+              <div class="rghtdtl" *ngIf="address == 'false'"><button class="vrfybtn" disabled="true">Verify</button></div>
+              <div class="rghtdtl" *ngIf="address == 'true'"><button class="vrfybtn" (click)="page('address')">Verify</button></div>
+            </td>
+            <td class="vrfydta" *ngIf="govid == 'true'"><div class="rghtdtl"><button class="vrfiedbtn" >Verified</button></div></td>
+      </tr>
+      <tr>
+            <td class="vrfydta"><div class="lftdtl">Video Call</div></td>
+            <td class="vrfydta" *ngIf="vc == 'false'">
+              <div class="rghtdtl" *ngIf="govid == 'false'"><button class="vrfybtn" disabled="true">Verify</button></div>
+              <div class="rghtdtl" *ngIf="govid == 'true'"><button class="vrfybtn">Verify</button></div>
+            </td>
+            <td class="vrfydta" *ngIf="vc == 'true'"><div class="rghtdtl"><button class="vrfiedbtn">Verified</button></div></td>
+      </tr>
+      </table>
+    </div>
+    <!-- End Level 2 -->
+
+     <!-- Start Level 3 -->
+     <div class="vrfhdngs">
+        <label>Third Level</label>
+    </div>
+    <div class="lvlcntntlst">
+      <table class="mstrtbl">
+      <tr>
+          <td class="vrfydta"><div class="lftdtl">Bank Statement</div></td>
+          <td class="vrfydta" *ngIf="bankStatement == 'false'">
+            <div class="rghtdtl" *ngIf="vc == 'false'"><button class="vrfybtn" disabled="true">Verify</button></div>
+            <div class="rghtdtl" *ngIf="vc == 'true'"><button class="vrfybtn" >Verify</button></div>
+          </td>
+          <td class="vrfydta" *ngIf="bankStatement == 'true'"><div class="rghtdtl"><button class="vrfiedbtn" >Verified</button></div></td>
+      </tr>
+      <tr>
+            <td class="vrfydta"><div class="lftdtl">Billing Statement</div></td>
+            <td class="vrfydta" *ngIf="billingStatement == 'false'">
+              <div class="rghtdtl" *ngIf="bankStatement == 'false'"><button class="vrfybtn" disabled="true">Verify</button></div>
+              <div class="rghtdtl" *ngIf="bankStatement == 'true'"><button class="vrfybtn">Verify</button></div>
+            </td>
+            <td class="vrfydta" *ngIf="billingStatement == 'true'"><div class="rghtdtl"><button class="vrfiedbtn">Verified</button></div></td>
+      </tr>
+      </table>
+    </div>
+    <!-- End Level 3 -->
+  </div>
+</div>
+<!-- End Content -->
+</ion-content>

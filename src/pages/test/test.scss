@@ -1,0 +1,21 @@
+page-test {
+    .scroll-content{
+        padding:0%;
+        background-color:#2E2F41;
+    }
+    .scroll-content::-webkit-scrollbar {
+        border:0;
+        width:0;
+        background: rgba(0,0,0,0);
+    }   
+    .txt{
+        color:#FFFFFF;
+        margin-bottom:2vw;
+    }
+    .infhldr{
+        display:flex;
+         flex-direction:column;
+         padding:2vw;
+    }
+}
+

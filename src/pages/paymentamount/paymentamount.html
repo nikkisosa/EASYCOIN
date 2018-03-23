@@ -1,0 +1,198 @@
+<!--
+  Generated template for the PaymentamountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title style="font-style:'roboto';">Payment</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="scroll-content">
+  <div class="whlhldr">
+  <div class="cmpnylg">
+    <img src="{{img}}" class="cmpnylgimg"/>
+  </div>
+
+  <!-- For Cignal -->
+  <div class="frstpymntdv" *ngIf="partner == 'Cignal' && details">
+      <ion-item class="inptflds">
+          <ion-input type="number" class="amnttxt" placeholder="Account Number" [(ngModel)]="account_no"></ion-input>
+      </ion-item>
+      <ion-item class="inptflds">
+          <ion-input type="number" class="amnttxt" placeholder="Amount" [(ngModel)]="amount"></ion-input>
+      </ion-item>
+      <ion-item class="inptflds">
+          <ion-input type="text" class="amnttxt" pattern="/^[a-zA-Z\s]*$/" placeholder="First Name" [(ngModel)]="fname"></ion-input>
+      </ion-item>
+      <ion-item class="inptflds">
+          <ion-input type="text" class="amnttxt" pattern="/^[a-zA-Z\s]*$/" placeholder="Last Name" [(ngModel)]="lname"></ion-input>
+      </ion-item>
+      <ion-item class="inptflds">
+          <ion-input type="text" class="amnttxt" pattern="/^[a-zA-Z\s]*$/" placeholder="Middle Initial (Optional)" [(ngModel)]="mname"></ion-input>
+      </ion-item>
+  </div>
+<!-- End For Cignal -->
+
+<!-- For Meralco -->
+<div class="frstpymntdv" *ngIf="partner == 'Meralco' && details">
+  <ion-item class="inptflds">
+      <ion-input type="number" class="amnttxt" placeholder="Reference Number" [(ngModel)]="reference_no"></ion-input>
+  </ion-item>
+  <ion-item class="inptflds">
+      <ion-input type="number" class="amnttxt" placeholder="Amount" [(ngModel)]="amount"></ion-input>
+  </ion-item>
+</div>
+<!-- End For Meralco -->
+
+ <!-- For Maynilad -->
+ <div class="frstpymntdv" *ngIf="partner == 'Maynilad' && details">
+  <ion-item class="inptflds">
+      <ion-input type="number" class="amnttxt" placeholder="Account Number" [(ngModel)]="account_no"></ion-input>
+  </ion-item>
+  <ion-item class="inptflds">
+      <ion-input type="number" class="amnttxt" placeholder="Amount" [(ngModel)]="amount"></ion-input>
+  </ion-item>
+</div>
+<!-- End For Maynilad -->
+
+<!-- For PLDT -->
+<div class="frstpymntdv" *ngIf="partner == 'Pldt' && details">
+  <ion-item class="inptflds">
+      <ion-input type="number" class="amnttxt" placeholder="Account Number" [(ngModel)]="account_no"></ion-input>
+  </ion-item>
+  <ion-item class="inptflds">
+      <ion-input type="number" class="amnttxt" placeholder="Amount" [(ngModel)]="amount"></ion-input>
+  </ion-item>
+  <ion-item class="inptflds">
+      <ion-input type="tel" maxlength="7" pattern="[0-9]{10}" class="amnttxt" placeholder="Phone Number" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+
+  <!-- Select -->
+  <ion-item class="inptflds">
+    <ion-label class="slcthdrsrvces">Service</ion-label>
+    <ion-select multiple="false" cancelText="Cancel" okText="Select" class="amnttxt" [(ngModel)]="service">
+      <ion-option value="DSL / Fibr with Landline">DSL / Fibr with Landline</ion-option>
+      <ion-option value="Landline Only">Landline Only</ion-option>
+    </ion-select>
+  </ion-item>
+  <!-- End Select -->
+</div>
+<!-- End For PLDT -->
+
+
+<!-- Start Previews -->
+
+<!-- Start Cignal Preview -->
+<div class="bgprvw" *ngIf="partner == 'Cignal' && confirm_details">
+  <ion-grid class="grdne">
+    <ion-row>
+      <ion-col col-6 class="cldtls txtlftclr" text-left>Account Number</ion-col>
+      <ion-col col-6 class="cldtls" text-right>{{account_no}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="cldtls txtlftclr" text-left>Amount</ion-col>
+      <ion-col col-6 class="cldtls" text-right>Php {{amount}}</ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col col-6 class="cldtls txtlftclr" text-left>First Name</ion-col>
+      <ion-col col-6 class="cldtls" text-right>{{fname}}</ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col col-6 class="cldtls txtlftclr" text-left>Last Name</ion-col>
+      <ion-col col-6 class="cldtls" text-right>{{lname}}</ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col col-6 class="cldtls txtlftclr" text-left>Middle Name</ion-col>
+      <ion-col col-6 class="cldtls" text-right>{{mname}}</ion-col>
+  </ion-row>
+  </ion-grid>
+</div>
+<!-- End Cignal Preview -->
+
+<!-- Start Meralco Preview -->
+<div class="bgprvw" *ngIf="partner == 'Meralco' && confirm_details">
+    <ion-grid class="grdne">
+      <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Reference Number</ion-col>
+        <ion-col col-6 class="cldtls" text-right>{{reference_no}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Amount</ion-col>
+        <ion-col col-6 class="cldtls" text-right>Php {{amount}}</ion-col>
+    </ion-row>
+    </ion-grid>
+  </div>
+  <!-- End Meralco Preview -->
+
+  <!-- Start Maynilad Preview -->
+<div class="bgprvw" *ngIf="partner == 'Maynilad' && confirm_details">
+    <ion-grid class="grdne">
+      <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Account Number</ion-col>
+        <ion-col col-6 class="cldtls" text-right>{{account_no}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Amount</ion-col>
+        <ion-col col-6 class="cldtls" text-right>Php {{amount}}</ion-col>
+    </ion-row>
+    </ion-grid>
+  </div>
+  <!-- End Maynilad Preview -->
+
+  <!-- Start PLDT Preview -->
+<div class="bgprvw" *ngIf="partner == 'Pldt' && confirm_details">
+    <ion-grid class="grdne">
+      <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Account Number</ion-col>
+        <ion-col col-6 class="cldtls" text-right>{{account_no}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Amount</ion-col>
+        <ion-col col-6 class="cldtls" text-right>Php {{amount}}</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Phone Number</ion-col>
+        <ion-col col-6 class="cldtls" text-right>{{phone}}</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-6 class="cldtls txtlftclr" text-left>Service</ion-col>
+        <ion-col col-6 class="cldtls" text-right>{{service}}</ion-col>
+    </ion-row>
+    </ion-grid>
+  </div>
+  <!-- End PLDT Preview -->
+
+<!-- End Previous -->
+
+
+<!-- user Details -->
+  <div class="pymntdtlsonehldr" *ngIf="success_details" >
+    <img src="assets/imgs/paidicontwo.png" class="paidicnimg">
+
+    <div class="tbldv">
+        <label class="rfnmbrhdr">Your reference ID is</label>
+        <label  class="rfnmbrs">5546546546</label>
+    <table class="dtlstblone">
+      <tr>
+        <td text-left class="rcptdtlsbtm">Account Number</td>
+        <td text-right class="rcptdtlsbtm">0001811</td>
+      </tr>
+      <tr>
+        <td text-left class="rcptdtlsbtm">Total Due</td>
+        <td text-right class="rcptdtlsbtm">Php 0.00</td>
+      </tr>
+      <tr>
+        <td text-left class="rcptdtlsbtm ttltxt">Total Amount</td>
+        <td text-right class="rcptdtlsbtm ttltxt">Php 0.00</td>
+      </tr>
+    </table>
+  </div>
+<!-- End user Details -->
+</div>
+
+  <button ion-button color="header" class="prcdbtn" (click)="onNext()">Tap to proceed</button>
+</div>
+</ion-content>

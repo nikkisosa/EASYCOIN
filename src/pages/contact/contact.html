@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="header">
+  
+  <ion-toolbar>
+<div class="hdrdvsrch">
+  <ion-searchbar
+    [(ngModel)]="contactToBeFound"
+    [showCancelButton]="search"
+    (ionInput)="getItems($event)"
+    (ionCancel)="onCancel($event)" class="srchbr">
+  </ion-searchbar>
+</div>
+</ion-toolbar>
+</ion-navbar>
+</ion-header>
+
+<ion-content class="scroll-content">
+    
+  <!-- <ion-list class="lstcntct">
+    <ion-item class="itmpnl" *ngFor="let item of contactfound">
+      <ion-label class="namelbl">{{item.displayName}}</ion-label>
+      <ion-label class="numbrlbl">{{item.phoneNumbers[0].value}}</ion-label>
+    </ion-item>
+  </ion-list> -->
+<div class="lstcntct">
+   <div color="bodycolor" class="cntctpnl" *ngFor="let item of contactfound" (click)="selected(item.phoneNumbers[0].value)">
+      <table>
+          <tr>
+            <td class="dtaspacng"><label class="nmcntctprsn">{{item.displayName}}</label></td>
+          </tr>
+          <tr>
+            <td class="dtaspacng"><label class="cntnmbr">{{item.phoneNumbers[0].value}}</label></td>  
+          </tr> 
+          </table>  
+    </div>
+</div>
+</ion-content>
