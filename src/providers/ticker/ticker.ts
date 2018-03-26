@@ -8,7 +8,7 @@ export class TickerProvider {
 
   private USD = 'https://api.coindesk.com/v1/bpi/currentprice.json';
   private USD_TO_PHP = 'https://api.fixer.io/latest?base=USD';
-  
+  private Currency_TO_PHP = 'https://api.coinbase.com/v2/exchange-rates?currency=';
   private coinbase_pricing = 'https://api.coinbase.com/v2/prices/spot?currency=';
   constructor(public http: Http) {
   }
