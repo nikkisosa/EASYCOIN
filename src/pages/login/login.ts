@@ -5,9 +5,7 @@ import { RegistrationPage } from "../registration/registration";
 import { Network } from '@ionic-native/network';
 import { CommonProvider } from "../../providers/common/common";
 import { ServicesProvider } from "../../providers/services/services";
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { LocalsessionProvider } from '../../providers/localsession/localsession';
 import { EasycoinlockPage } from "../easycoinlock/easycoinlock";
 import { Device } from '@ionic-native/device';
@@ -36,10 +34,8 @@ export class LoginPage {
     private common: CommonProvider,
     private network:Network,
     private services:ServicesProvider,
-    private sqlite:SQLite,
     private formBuilder:FormBuilder,
     private localSession:LocalsessionProvider,
-    private fb: Facebook,
     private device: Device
   ) {
     
@@ -79,61 +75,59 @@ export class LoginPage {
             if (this.reponse.status == "verified") {
 
               
-              this.services.key(this.reponse.data[0].user)
-                .then((res) => {
-                  this.priv = res;
-                  this.services.bal_inquiry(this.reponse.data[0].user, this.priv.priv_key)
-                    .then((bal) => {
-                      let inquiry: any = bal;
-                      this.localSession.set_local_account_id(this.reponse.data[0].account_id);
-                      this.localSession.set_compiled_value(
-                        this.reponse.data[0].id, this.reponse.data[0].fname,
-                        this.reponse.data[0].lname, this.reponse.data[0].mname,
-                        this.reponse.data[0].user, this.reponse.data[0].email,
-                        this.reponse.data[0].address, this.reponse.data[0].dob,
-                        inquiry.hyperload_vw, this.priv.priv_key, this.reponse.data[0].user_token
-                      );
-                      this.localSession.set_local_key(this.reponse.data[0].keys);
-                      this.localSession.set_local_balance(this.reponse.data[0].balance);
-                      this.services.limits(this.reponse.data[0].account_id)
-                        .then((limits) => {
-                          this.limit_holder = limits;
-                          if (this.limit_holder.success == "true") {
-                            this.localSession.set_local_verified_email(this.limit_holder.verify[0].email_verified);
-                            this.localSession.set_local_verified_kyc(this.limit_holder.verify[0].address_verify);
-                          } else {
-                            this.localSession.set_local_verified_email('false');
-                            this.localSession.set_local_verified_kyc('false');
-                          }
+              // this.services.key(this.reponse.data[0].user)
+              // .then((res) => {
+              //   this.priv = res;
+              //   this.services.bal_inquiry(this.reponse.data[0].user, this.priv.priv_key)
+              //     .then((bal) => {
+              //       let inquiry: any = bal;
+                    
+              //     });
+              // }).catch((e) => {
+              //   this.common.closeLoading();
+              //   this.common.showAlert('Connection Error', '', 'Please check your internet connection.');
+              // });
+              this.localSession.set_local_account_id(this.reponse.data[0].account_id);
+              this.localSession.set_compiled_value(
+                this.reponse.data[0].id, this.reponse.data[0].fname,
+                this.reponse.data[0].lname, this.reponse.data[0].mname,
+                this.reponse.data[0].user, this.reponse.data[0].email,
+                this.reponse.data[0].address, this.reponse.data[0].dob,
+                '', '', this.reponse.data[0].user_token
+              );
+              this.localSession.set_local_key(this.reponse.data[0].keys);
+              this.localSession.set_local_balance(this.reponse.data[0].balance);
+              this.services.limits(this.reponse.data[0].account_id)
+                .then((limits) => {
+                  this.limit_holder = limits;
+                  if (this.limit_holder.success == "true") {
+                    this.localSession.set_local_verified_email(this.limit_holder.verify[0].email_verified);
+                    this.localSession.set_local_verified_kyc(this.limit_holder.verify[0].address_verify);
+                  } else {
+                    this.localSession.set_local_verified_email('false');
+                    this.localSession.set_local_verified_kyc('false');
+                  }
 
-                          this.services.devices(this.uuid, this.model, this.reponse.data[0].account_id, this.user, this.reponse.data[0].fname)
-                            .then((device) => {
-                              
-                              let dev_res: any = device;
-                              this.common.closeLoading();
-                              if (dev_res.result.error_code == '0x0000') {
-                                this.directTo(dev_res.result.direct, this.reponse.data[0].user, this.reponse.data[0].account_id);
-                                
-                                this.common.presentToast('welcome ' + this.reponse.data[0].fname);
-                              } else {
-                                this.common.showAlert('EASYCOIN', '', dev_res.result.message);
-                              }
-                            }).catch((e) => {
-                              this.common.closeLoading();
-                              console.log(e);
-                            })
-                        }).catch((e) => {
-                          this.common.closeLoading();
-                          alert(e);
-                        })
+                  this.services.devices(this.uuid, this.model, this.reponse.data[0].account_id, this.user, this.reponse.data[0].fname)
+                    .then((device) => {
 
-                      
-                    });
+                      let dev_res: any = device;
+                      this.common.closeLoading();
+                      if (dev_res.result.error_code == '0x0000') {
+                        this.directTo(dev_res.result.direct, this.reponse.data[0].user, this.reponse.data[0].account_id);
+
+                        this.common.presentToast('welcome ' + this.reponse.data[0].fname);
+                      } else {
+                        this.common.showAlert('EASYCOIN', '', dev_res.result.message);
+                      }
+                    }).catch((e) => {
+                      this.common.closeLoading();
+                      console.log(e);
+                    })
                 }).catch((e) => {
                   this.common.closeLoading();
-                  this.common.showAlert('Connection Error', '', 'Please check your internet connection.');
-                });
-
+                  alert(e);
+                })
 
             } else if (this.reponse.status == "not verified") {
               this.common.closeLoading();
@@ -145,9 +139,9 @@ export class LoginPage {
               this.common.presentToast('Invalid account. Please signup');
             }
 
-          }).catch(()=>{
+          }).catch((e)=>{
             this.common.closeLoading();
-            this.common.showAlert('Error', '', 'Could not connection to server');
+            this.common.showAlert('Error', '', e);
           })
         } else {
           this.common.closeLoading();

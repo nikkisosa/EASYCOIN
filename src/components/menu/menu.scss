@@ -25,6 +25,20 @@ menu {
         color:#FFFFFF;
         margin-top:3%;
     }
+    .vrfdstts{
+       color:#1ae78f; //use #ffdb00 for unverified user
+       font-style:'roboto';
+       font-size:3.5vw;
+    }
+    .vrfdsttsdiv{
+        padding:0%;
+        padding-left:2vw;
+        padding-right:2vw;
+        padding-top:.10vw;
+        padding-bottom:.10vw;
+        border:1px solid #1ae78f; //use #ffdb00 for unverified user
+        margin-top:1.50vw;
+    }
     .nvbtnlstsd{
         overflow-y:scroll;
         padding:0% !important;
@@ -73,6 +87,20 @@ menu {
         color:#FFFFFF;
         margin-top:3%;
     }
+    .vrfdstts{
+        color:#1ae78f; //use #ffdb00 for unverified user
+        font-style:'roboto';
+        font-size:2.2vh;
+     }
+     .vrfdsttsdiv{
+         padding:0%;
+         padding-left:2vw;
+         padding-right:2vw;
+         padding-top:.10vw;
+         padding-bottom:.10vw;
+         border:1px solid #1ae78f; //use #ffdb00 for unverified user
+         margin-top:1.50vw;
+     }
     .nvbtnlstsd{
         overflow-y:scroll;
         padding:0% !important;

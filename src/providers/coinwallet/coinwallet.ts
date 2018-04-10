@@ -6,14 +6,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CoinwalletProvider {
   
-  // private request_url = 'http://192.168.1.2/esy-coin/api/balance_wallet';
-  // private request_transefer_url = 'http://192.168.1.2/esy-coin/api/balance_transfer';
-  // private request_createwallet_url = 'http://192.168.1.2/esy-coin/api/create_wallet';
-  // private request_converter_url: string = 'http://192.168.1.2/esy-coin/api/converter';
-  private request_url = 'http://hyperloop.servehttp.com/esy-coin/api/balance_wallet';
-  private request_transefer_url = 'http://hyperloop.servehttp.com/esy-coin/api/balance_transfer';
-  private request_createwallet_url = 'http://hyperloop.servehttp.com/esy-coin/api/create_wallet';
-  private request_converter_url: string = 'http://hyperloop.servehttp.com/esy-coin/api/converter';
+  //private url = 'http://192.168.1.2/esy-coin/api2/access/v2';
+  private url = 'http://hyperloop.servehttp.com/esy-coin/api2/access/v2';
   private sig:any;
   constructor(public http: Http) {
   }
@@ -27,7 +21,8 @@ export class CoinwalletProvider {
       body.append('mobile',mobile_no);
       body.append('name', name);
       body.append('email', email);
-      this.http.post(this.request_createwallet_url,body,{headers:headers}).
+      body.append('path', 'create_wallet');
+      this.http.post(this.url,body,{headers:headers}).
       subscribe(res=>{
         resolve(res.json());
       },(err)=>{
@@ -46,7 +41,8 @@ export class CoinwalletProvider {
       let body = new FormData();
       body.append('pubkey', CryptoJS.MD5(mobile_no).toString());
       body.append('sighash', this.sig.toString(CryptoJS.enc.Base64));
-      this.http.post(this.request_url, body, { headers: headers }).
+      body.append('path', 'balance_wallet');
+      this.http.post(this.url, body, { headers: headers }).
         subscribe(res => {
           resolve(res.json());
         }, (err) => {
@@ -70,7 +66,8 @@ export class CoinwalletProvider {
       body.append('address', addressTo);
       body.append('currency', currencyType);
       body.append('sender', mobile_no);
-      this.http.post(this.request_transefer_url, body, { headers: headers }).
+      body.append('path', 'balance_transfer');
+      this.http.post(this.url, body, { headers: headers }).
         subscribe(res => {
           resolve(res.json());
         }, (err) => {
@@ -78,6 +75,7 @@ export class CoinwalletProvider {
         })
     })
   }
+
 
   converter(mobile_no, key, from, to, amount) {
     this.signiture(mobile_no, key);
@@ -94,7 +92,8 @@ export class CoinwalletProvider {
       body.append('from', from);
       body.append('to', to);
       body.append('mobile_no', mobile_no);
-      this.http.post(this.request_converter_url, body, { headers: headers }).
+      body.append('path', 'converter');
+      this.http.post(this.url, body, { headers: headers }).
         subscribe(res => {
           resolve(res.json());
         }, (err) => {
@@ -109,7 +108,7 @@ export class CoinwalletProvider {
     } else if (_default == 'SHA2') {
       this.sig = CryptoJS.HmacSHA256(mobile_no, key);
     }
-    
+   
   }
 
 }

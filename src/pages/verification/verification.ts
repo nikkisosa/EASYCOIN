@@ -50,44 +50,37 @@ export class VerificationPage {
       }else{
         this.showResend = false;
         this.counter = false;
-        this.services.bal_inquiry(this.localSession.get_local_phone(), this.localSession.get_local_priv_key())
-        .then((bal) => {
-          let inquiry: any = bal;
-          this.localSession.set_compiled_value(
-            this.holder.data[0].id, this.holder.data[0].fname,
-            this.holder.data[0].lname, this.holder.data[0].mname,
-            this.localSession.get_local_phone(), '',
-            '', this.holder.data[0].dob,
-            inquiry.hyperload_vw, this.localSession.get_local_priv_key(), this.holder.data[0].user_token
-          );
-          
-          this.coin.create_wallet(this.holder.data[0].fname + ' ' + this.holder.data[0].mname + ' ' + this.holder.data[0].lname, this.localSession.get_local_phone(), this.holder.email)
-            .then((results) => {
-              let priv: any = results;
-              console.log(priv);
-              this.services.accountUpdate(priv.privatekey, this.localSession.get_local_phone())
-              .then((updateResult)=>{
-                let update:any = updateResult;
-                if(update.error_code == "0x0000")
-                {
+        this.localSession.set_compiled_value(
+          this.holder.data[0].id, this.holder.data[0].fname,
+          this.holder.data[0].lname, this.holder.data[0].mname,
+          this.localSession.get_local_phone(), '',
+          '', this.holder.data[0].dob,
+          '', this.localSession.get_local_priv_key(), this.holder.data[0].user_token
+        );
+
+        this.coin.create_wallet(this.holder.data[0].fname + ' ' + this.holder.data[0].mname + ' ' + this.holder.data[0].lname, this.localSession.get_local_phone(), this.holder.email)
+          .then((results) => {
+            let priv: any = results;
+            console.log(priv);
+            this.services.accountUpdate(priv.privatekey, this.localSession.get_local_phone())
+              .then((updateResult) => {
+                let update: any = updateResult;
+                if (update.error_code == "0x0000") {
                   this.navCtrl.setRoot(LoginPage);
                   this.loading = true;
                 }
-                else if (update.error_code == "0x0001")
-                {
-                  this.common.showAlert("Error","",update.message);
+                else if (update.error_code == "0x0001") {
+                  this.common.showAlert("Error", "", update.message);
                   this.loading = true;
                 }
-                else
-                {
+                else {
                   this.common.showAlert("Error", "", update.message);
                   this.loading = true;
                 }
               })
-            }).catch((e) => {
-              console.log(e);
-            })
-        });
+          }).catch((e) => {
+            console.log(e);
+          })
         
         this.common.presentToast(this.holder.response);
       }

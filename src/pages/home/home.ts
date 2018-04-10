@@ -14,7 +14,7 @@ import { LocalsessionProvider } from '../../providers/localsession/localsession'
 
 import { MoneytransferPage } from "../moneytransfer/moneytransfer";
 import { HistoryPage } from "../history/history";
-import Qrcode from 'qrcode';
+
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 import { CoinwalletProvider } from "../../providers/coinwallet/coinwallet";
 import { TickerProvider } from "../../providers/ticker/ticker";
@@ -24,7 +24,6 @@ import { TickerProvider } from "../../providers/ticker/ticker";
 })
 export class HomePage {
   @ViewChild(Refresher) refresher: Refresher;
-  private code: any = '';
   private SMS: any;
   private generated = '';
   private balance: any = '0';
@@ -40,7 +39,15 @@ export class HomePage {
   private items: any = [];
   private pages: number = 1;
 
-  private w_btc: any = '0.0000000';
+  private w_btc: any = '0';
+  private v_eth: any = '0';
+  private v_ltc: any = '0';
+  private v_zec: any = '0';
+  private v_lcc: any = '0';
+  private v_usdt: any = '0';
+  private v_bcc: any = '0';
+  private v_btg: any = '0';
+
 
   private token: any;
   private loading: boolean = true;
@@ -74,17 +81,16 @@ export class HomePage {
   ionViewDidLoad() {
     this.loading = true;
     this.convertCurrencyToPhp();
-    this.doRefresh(this.refresher); this.convertCurrencyToPhp();
+    this.doRefresh(this.refresher);
   }
 
   onload() {
     
     this.token = this.localSession.get_local_token();
     this.key = this.localSession.get_local_key();
-    //this.balance = this.localSession.get_local_balance();
+
     this.name = this.localSession.get_local_name() + ' ' + this.localSession.get_local_lname();
     this.number = this.localSession.get_local_phone();
-    //this.w_btc = this.localSession.get_local_bitcoin();
     this.email_bottom_banner = this.localSession.get_local_verified_email();
 
     if (this.email_bottom_banner == 'false') {
@@ -99,22 +105,8 @@ export class HomePage {
     } else {
       this.identifier_bottom_banner = 'true';
     }
-
-    /**
-     * this will generate a qrcode image
-     * 
-     */
-    this.code = 'easycoin ' + this.number;
-    const qrcode = Qrcode;
-    const self = this;
-    qrcode.toDataURL(JSON.stringify(this.code), { errorCorrectionLevel: 'H' }, function (err, url) {
-      self.generated = url;
-    })
   }
 
-  displayQrCode() {
-    return this.generated !== '';
-  }
 
   showHideDiv() {
     if (this.showDiv == true) {
@@ -145,9 +137,15 @@ export class HomePage {
         if (result.error_code == '0x0000') {
           this.balance = result.v_fphp;
           this.w_btc = result.v_btc;
+          this.v_eth = result.v_eth;
+          this.v_ltc = result.v_ltc;
+          this.v_zec = result.v_zec;
+          this.v_lcc = result.v_lcc;
+          this.v_usdt = result.v_usdt;
+          this.v_bcc = result.v_bcc;
+          this.v_btg = result.v_btg;
           // Convertion
-          
-          this.btc_in_php = ((this.btcSellPrice / this.phpRate) * this.w_btc).toFixed(2);
+          this.btc_in_php = (this.btcSellPrice * this.w_btc).toFixed(2);
 
         } else {
           this.common.presentToast('invalid record. error code - '+result.error_code);

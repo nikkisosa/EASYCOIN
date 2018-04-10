@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { CommonProvider } from "../../providers/common/common";
 import { EasycoinlockPage } from "../easycoinlock/easycoinlock";
 import { LoginPage } from "../login/login";
@@ -23,7 +22,6 @@ export class SplashscreenPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private sqliteDB:SQLite,
     private common:CommonProvider,
     private localSession: LocalsessionProvider) {
   }

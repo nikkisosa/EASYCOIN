@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CommonProvider } from "../../providers/common/common";
-import { SetPage } from "../set/set";
 import { ChangepassPage } from "../changepass/changepass";
 /**
  * Generated class for the SecurityPage page.
@@ -26,9 +25,6 @@ export class SecurityPage {
 
   pincode(page){
     switch (page) {
-      case 'pin':
-        this.common.openModal(SetPage);
-        break;
       case 'changepass':
         this.common.openModal(ChangepassPage);
         break;

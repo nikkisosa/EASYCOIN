@@ -87,16 +87,16 @@ export class LoadmodalPage {
         this.common.showAlert('Error', 'Please enter customer no#');
         this.common.closeLoading();
       } else if (this.customer_no.length == 11) {
-        await this.services.buy(this.my_no, this.customer_no, this.key, this.network, this.pcode)
-          .then((res) => {
-            this.response = res;
-            if (this.response.error_code == '0x0000') {
-              this.common.showAlert('Load', 'Successfully loaded');
-              this.navCtrl.pop();
-            } else {
-              this.common.showAlert('Load', 'UnSuccessfully loaded');
-            }
-          }).catch(e => alert(e));
+        // await this.services.buy(this.my_no, this.customer_no, this.key, this.network, this.pcode)
+        //   .then((res) => {
+        //     this.response = res;
+        //     if (this.response.error_code == '0x0000') {
+        //       this.common.showAlert('Load', 'Successfully loaded');
+        //       this.navCtrl.pop();
+        //     } else {
+        //       this.common.showAlert('Load', 'UnSuccessfully loaded');
+        //     }
+        //   }).catch(e => alert(e));
 
         this.common.closeLoading();
       }

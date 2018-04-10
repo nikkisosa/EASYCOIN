@@ -126,32 +126,32 @@ export class ConverterPage {
    */
   private executeExchange(){
     this.convert();
-    if(this.php){
-      this.services.exchange_php_btc(this.account_no, this.exchanged, this.php, this.token)
-        .then((result) => {
-          let res: any = result;
-          if(res.result.success == 'success'){
-            this.localSession.set_local_balance(res.result.balance);
-            this.localSession.set_local_bitcoin(res.result.w_btc);
-            this.common.showAlert('Easycoin','',res.result.message);
-          }else{
-            this.common.showAlert('Easycoin','',res.result.message);
-          }
+    // if(this.php){
+    //   this.services.exchange_php_btc(this.account_no, this.exchanged, this.php, this.token)
+    //     .then((result) => {
+    //       let res: any = result;
+    //       if(res.result.success == 'success'){
+    //         this.localSession.set_local_balance(res.result.balance);
+    //         this.localSession.set_local_bitcoin(res.result.w_btc);
+    //         this.common.showAlert('Easycoin','',res.result.message);
+    //       }else{
+    //         this.common.showAlert('Easycoin','',res.result.message);
+    //       }
 
-          this.php = 0;
-          this.exchanged = 0.0000000;
-          this.onTap = false;
-          this.disabled = false;
+    //       this.php = 0;
+    //       this.exchanged = 0.0000000;
+    //       this.onTap = false;
+    //       this.disabled = false;
           
-        }).catch((e) => {
-          this.common.showAlert('Error', '', 'Could not connection to server');
-        })
-    }else{
-      this.disabled = false;
-      this.onTap = false;
-      this.common.showAlert('Error', '','Please enter your desire amount');
+    //     }).catch((e) => {
+    //       this.common.showAlert('Error', '', 'Could not connection to server');
+    //     })
+    // }else{
+    //   this.disabled = false;
+    //   this.onTap = false;
+    //   this.common.showAlert('Error', '','Please enter your desire amount');
       
-    }
+    // }
   }
 
   private converter(){

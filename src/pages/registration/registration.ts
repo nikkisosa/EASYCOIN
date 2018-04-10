@@ -79,21 +79,22 @@ export class RegistrationPage {
                   this._data = result;
                   if (this._data.response == 'success') {
 
-                    this.services.create_account(this._name + ' ' + this._mname + ' ' + this._lname, '', this.user)
-                      .then((res) => {
-                        this._info = res;
-                        console.log(this._info);
-                        if (this._info.code == "0x0000") {
-                          this.tap = false;
-                          this.localSession.set_local_phone(this.user);
-                          this.localSession.set_local_priv_key(this._info.result);
-                          this.navCtrl.setRoot(VerificationPage);
+                    // this.services.create_account(this._name + ' ' + this._mname + ' ' + this._lname, '', this.user)
+                    //   .then((res) => {
+                    //     this._info = res;
+                    //     console.log(this._info);
+                    //     if (this._info.code == "0x0000") {
+                    //       this.tap = false;
+                    //       this.localSession.set_local_phone(this.user);
+                    //       this.localSession.set_local_priv_key(this._info.result);
+                         
 
-                        }
+                    //     }
 
-                      }).catch(() => {
-                        this.common.showAlert('Connection Error', '', 'Please check your internet connection.')
-                      })
+                    //   }).catch(() => {
+                    //     this.common.showAlert('Connection Error', '', 'Please check your internet connection.')
+                    //   })
+                    this.navCtrl.setRoot(VerificationPage);
 
                   }
                   else if (this._data.response == 'invalid number') {
@@ -102,7 +103,9 @@ export class RegistrationPage {
                   else {
                     this.common.presentToast('Mobile number is already exist.');
                   }
-                });
+                }).catch(() => {
+                    this.common.showAlert('Connection Error', '', 'Please check your internet connection.')
+                })
             } 
             else 
             {

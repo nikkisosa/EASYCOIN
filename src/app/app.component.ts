@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CodePush, SyncStatus } from '@ionic-native/code-push';
 import { LocalNotifications } from '@ionic-native/local-notifications';
-import { StorageProvider } from "../providers/storage/storage";
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { Network } from '@ionic-native/network';
 
@@ -19,13 +18,12 @@ import { EasycoinlockPage } from "../pages/easycoinlock/easycoinlock";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = HomePage;
+  rootPage: any = SplashscreenPage;
   prog: any = '';
   constructor(
                 private platForm: Platform,
                 statusBar: StatusBar,
                 splashScreen: SplashScreen,
-                storage: StorageProvider,
                 private codePush: CodePush,
                 private localNotifications: LocalNotifications,
                 private androidPermissions: AndroidPermissions,

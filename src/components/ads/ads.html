@@ -1,0 +1,10 @@
+<!-- Generated template for the AdsComponent component -->
+<ion-slides class="nwsldsndadds" *ngIf="advertise && advertise.length" loop="true" autoplay="4000" speed="1000"  pager effect="coverflow">
+  <!-- Start Single Slide -->
+    <ion-slide class="sldrsandadspnls" *ngFor="let advert of advertise">
+      <div class="adsandvrfypnls">
+        <img src="{{base_url+advert.img}}" class="adsimg"/>
+      </div>
+    </ion-slide>
+   <!-- End Single slide -->
+</ion-slides>

@@ -28,8 +28,6 @@ import { ContactPage } from "../pages/contact/contact";
 import { CommonProvider } from '../providers/common/common';
 import { NetworkProvider } from '../providers/network/network';
 import { ServicesProvider } from '../providers/services/services';
-import { SQLite } from '@ionic-native/sqlite';
-import { StorageProvider } from '../providers/storage/storage';
 //import { DatePicker } from '@ionic-native/date-picker';
 
 import { AppVersion } from '@ionic-native/app-version';
@@ -49,7 +47,6 @@ import { SplashscreenPage } from "../pages/splashscreen/splashscreen";
 //security
 import { PincodePage } from "../pages/pincode/pincode";
 import { SecurityPage } from "../pages/security/security";
-import { SetPage } from "../pages/set/set";
 import { ChangepassPage } from "../pages/changepass/changepass";
 import { VerifyemailPage } from "../pages/verifyemail/verifyemail";
 import { LevelsPage } from "../pages/levels/levels";
@@ -67,11 +64,15 @@ import { MoneytransferPage } from "../pages/moneytransfer/moneytransfer";
 //component
 import { LoadingcomponentComponent } from "../components/loadingcomponent/loadingcomponent";
 import { MenuComponent } from "../components/menu/menu";
+import { ShortcutComponent } from "../components/shortcut/shortcut";
+import { AdsComponent } from "../components/ads/ads";
 import { PaybillsPage } from "../pages/paybills/paybills";
 import { PaymentamountPage } from "../pages/paymentamount/paymentamount";
 import { CoinwalletProvider } from '../providers/coinwallet/coinwallet';
 import { TestPage } from "../pages/test/test";
 import { EasycoinlockPage } from "../pages/easycoinlock/easycoinlock";
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -89,7 +90,6 @@ import { EasycoinlockPage } from "../pages/easycoinlock/easycoinlock";
     PincodePage,
     SecurityPage,
     SplashscreenPage,
-    SetPage,
     ChangepassPage,
     ConverterPage,
     VerificationPage,
@@ -103,8 +103,8 @@ import { EasycoinlockPage } from "../pages/easycoinlock/easycoinlock";
     PaybillsPage,
     PaymentamountPage,
     LoadingcomponentComponent,
-    MenuComponent,
-    EasycoinlockPage, TestPage
+    MenuComponent, ShortcutComponent,
+    EasycoinlockPage, TestPage, AdsComponent
   ],
   imports: [
     BrowserModule,
@@ -137,7 +137,6 @@ import { EasycoinlockPage } from "../pages/easycoinlock/easycoinlock";
     PincodePage,
     SecurityPage,
     SplashscreenPage,
-    SetPage,
     ChangepassPage,
     ConverterPage,
     VerificationPage,
@@ -158,13 +157,12 @@ import { EasycoinlockPage } from "../pages/easycoinlock/easycoinlock";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CommonProvider,
     NetworkProvider,
-    ServicesProvider, HttpModule, SQLite,
-    StorageProvider,
+    ServicesProvider, HttpModule,
     Network, CodePush,LocalNotifications, AndroidPermissions,
     Contacts, Base64, AppVersion,
     LocalsessionProvider, Facebook,
     TickerProvider, Device,BarcodeScanner,
-    CoinwalletProvider,Device
+    CoinwalletProvider, Device, InAppBrowser
   ]
 })
 export class AppModule {}

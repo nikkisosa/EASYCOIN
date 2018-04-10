@@ -5,7 +5,6 @@ import { SecurityPage } from "../security/security";
 import { PincodePage } from "../pincode/pincode";
 import { CommonProvider } from "../../providers/common/common";
 import { AppVersion } from '@ionic-native/app-version';
-import { SetPage } from "../set/set";
 import { ChangepassPage } from "../changepass/changepass";
 
 /**
@@ -91,9 +90,6 @@ export class SettingsPage {
 
   pincode(page){
     switch (page) {
-      case 'pin':
-        this.common.openModal(SetPage);
-        break;
       case 'changepass':
         this.common.openModal(ChangepassPage);
         break;
